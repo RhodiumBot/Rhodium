@@ -18,7 +18,7 @@ module.exports.run = async (msg, args, client) => {
 }
 
 module.exports.info = {
-    beschreibung: "Eval Command",
-    level: 100,
+    description: "Eval Command",
+    level: 6,
     enabled: true
 }

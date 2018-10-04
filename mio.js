@@ -1,11 +1,11 @@
-const Discord = require('discord.js')
-const fs = require('fs')
-const cmdDir = fs.readdirSync('./commands/')
+const Discord = require('discord.js');
+const fs = require('fs');
+const cmdDir = fs.readdirSync('./commands/');
 //const config = require('./config.json')
 
 const client = new Discord.Client();
-console.log('`?')
-client.prefix = 'm!';
+console.log('`?');
+
 client.groups = [];
 client.commands = new Map;
 for (let dir of cmdDir) {
@@ -16,12 +16,11 @@ for (let dir of cmdDir) {
         let command = require(`./commands/${dir}/${commandFile}`);
         client.commands.set(commandFile.split('.')[0], [command, dir]);
     }
-};
+}
 
 fs.readdir("./events", (err, files) => {
     if (err) return console.error(err);
     files.forEach(file => {
-        console.log(file)
         if (!file.endsWith(".js")) return;
         const event = require(`./events/${file}`);
         let eventName = file.split(".")[0];
@@ -29,4 +28,4 @@ fs.readdir("./events", (err, files) => {
     });
 });
 
-client.login('NDkxMjc0NjU3MjU3ODgxNjAx.DoFg7A.m2O7fxD5oPUPz7Hk7jktDDrRXRY')
+client.login('NDkxMjc0NjU3MjU3ODgxNjAx.DoFg7A.m2O7fxD5oPUPz7Hk7jktDDrRXRY');
