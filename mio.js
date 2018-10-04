@@ -5,7 +5,7 @@ const cmdDir = fs.readdirSync('./commands/');
 
 const client = new Discord.Client();
 console.log('`?');
-
+client.embed = require('./embed');
 client.groups = [];
 client.commands = new Map;
 for (let dir of cmdDir) {

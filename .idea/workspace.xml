@@ -69,13 +69,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="2" />
-          <entry key="js" value="30" />
+          <entry key="js" value="38" />
           <entry key="sql" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="30" />
+          <entry key="JavaScript" value="38" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Scratch" value="1" />
         </counts>
@@ -83,13 +83,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="22" />
-          <entry key="js" value="1863" />
+          <entry key="js" value="2253" />
           <entry key="txt" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="1863" />
+          <entry key="JavaScript" value="2253" />
           <entry key="PLAIN_TEXT" value="50" />
         </counts>
       </usages-collector>
@@ -100,11 +100,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mio.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+            <state relative-caret-position="214">
+              <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/commands/zekro staff/kill.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="14" selection-start-column="14" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/commands/core/help.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -126,7 +144,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/test.js" />
-        <option value="$PROJECT_DIR$/mio.js" />
         <option value="$PROJECT_DIR$/events/ready.js" />
         <option value="$PROJECT_DIR$/utils/database.js" />
         <option value="$PROJECT_DIR$/commands/core/eval.js" />
@@ -138,6 +155,10 @@
         <option value="$PROJECT_DIR$/commands/core/say5.js" />
         <option value="$PROJECT_DIR$/commands/core/say.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/commands/zekro staff/kill.js" />
+        <option value="$PROJECT_DIR$/embed.js" />
+        <option value="$PROJECT_DIR$/mio.js" />
+        <option value="$PROJECT_DIR$/commands/core/help.js" />
       </list>
     </option>
   </component>
@@ -172,6 +193,27 @@
             <path>
               <item name="Mio" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mio" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mio" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mio" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+              <item name="zekro staff" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
           <select />
@@ -237,7 +279,7 @@
       <workItem from="1538559709818" duration="10030000" />
       <workItem from="1538579470877" duration="5419000" />
       <workItem from="1538635321384" duration="70000" />
-      <workItem from="1538638473997" duration="703000" />
+      <workItem from="1538638473997" duration="4173000" />
     </task>
     <task id="LOCAL-00001" summary="Changelost">
       <changelist id="" name="Changelost" comment="" />
@@ -253,13 +295,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17395000" />
+    <option name="totallyTimeSpent" value="20865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="0" width="1346" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49481866" visible="true" weight="0.2643857" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49481866" visible="true" weight="0.2643857" />
       <window_info id="Structure" order="1" sideWeight="0.5051814" side_tool="true" weight="0.2643857" />
       <window_info id="Favorites" order="2" sideWeight="0.5051814" side_tool="true" weight="0.2643857" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -272,12 +314,12 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32879046" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.13117547" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.31345826" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.16013628" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.32885906" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.1399689" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.1399689" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49832216" visible="true" weight="0.2643857" />
@@ -318,13 +360,6 @@
     <entry file="file://$PROJECT_DIR$/test.js" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/eb535604-fe7d-40e2-84f0-78bb20936428/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commands/core/eval.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -377,6 +412,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
           <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/zekro staff/kill.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/embed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2645">
+          <caret line="115" column="48" lean-forward="true" selection-start-line="115" selection-start-column="48" selection-end-line="115" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/core/help.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
         </state>
       </provider>
     </entry>
