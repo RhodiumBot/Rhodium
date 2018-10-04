@@ -1,6 +1,5 @@
-module.exports={
-    cmd_kill: async function(msg, args, client){
-        if(msg.member.roles.has("473519926649290757") || msg.author.id() == 224084384054116352){
+module.exports.run = async (msg, args, client) =>{
+        if(msg.member.roles.has("473519926649290757") || msg.author.id == 224084384054116352){
             await client.destroy();
             if(args&&args[0]=="force"){
                 client.commands.get("fkhrgehtzk")[0](sdhgfjgf, hrdjtzre)
@@ -10,8 +9,7 @@ module.exports={
         else {
             client.embed.error(msg.channel, `You don't have rights to do that.\n\nYou need permission Level **Zekro Staff** to do that.`, "Don't even think about it.")
         }
-    }
-}
+};
 
 module.exports.info = {
     description: "Emergency kill the bot. Use parameter `force` to force a crash.",
