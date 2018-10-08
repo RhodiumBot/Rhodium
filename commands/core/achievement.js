@@ -1,8 +1,15 @@
 const Discord   = require('discord.js');
 const snekfetch = require('snekfetch');
 module.exports.run = async (msg, args, client) => {
+    if(message.mentions.members.first()) {
+        let picture = msg.mentions.users.first().avatarURL+"?size=128";
+        let text = await args.join(" ").replace(`<@!${msg.mentions.members.first().id}>`, "").replace(`<@${msg.mentions.members.first().id}>`, "")
+    } else {
+        let text = args.join(" ");
+        let picture = "https://cdn.discordapp.com/emojis/495931857620434944.png?v1";
+    }
     let res = await snekfetch.post(`http://localhost:8081/api/image/achievement`)
-        .send({ "image": "https://cdn.discordapp.com/emojis/495931857620434944.png?v1", "token": "asd", "achievment": "Jeah"})
+        .send({ "image": picture, "token": "Not_Used_here", "achievment": text});
     msg.channel.send("", {
         "file": Buffer.from(res.body.data)
     });
