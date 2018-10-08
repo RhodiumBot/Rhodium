@@ -75,7 +75,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="2" />
-          <entry key="js" value="59" />
+          <entry key="js" value="60" />
           <entry key="sql" value="1" />
           <entry key="users" value="3" />
         </counts>
@@ -83,7 +83,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Database Element" value="3" />
-          <entry key="JavaScript" value="59" />
+          <entry key="JavaScript" value="60" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Scratch" value="1" />
         </counts>
@@ -92,13 +92,13 @@
         <counts>
           <entry key="cell" value="1" />
           <entry key="gitignore" value="22" />
-          <entry key="js" value="3482" />
+          <entry key="js" value="3487" />
           <entry key="txt" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="3482" />
+          <entry key="JavaScript" value="3487" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Scratch" value="1" />
         </counts>
@@ -119,11 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/commands/core/emote.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/events/ready.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="7" selection-end-column="7" />
+            <state relative-caret-position="230">
+              <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -146,11 +146,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commands/core/eval.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+            <state relative-caret-position="253">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -186,10 +186,10 @@
         <option value="$PROJECT_DIR$/commands/developer/level.js" />
         <option value="$PROJECT_DIR$/commands/core/help.js" />
         <option value="$PROJECT_DIR$/commands/core/emote.js" />
-        <option value="$PROJECT_DIR$/events/ready.js" />
         <option value="$PROJECT_DIR$/events/message.js" />
         <option value="$PROJECT_DIR$/commands/core/sql.js" />
         <option value="$PROJECT_DIR$/commands/core/eval.js" />
+        <option value="$PROJECT_DIR$/events/ready.js" />
       </list>
     </option>
   </component>
@@ -321,7 +321,7 @@
       <workItem from="1538762278529" duration="200000" />
       <workItem from="1538938706682" duration="161000" />
       <workItem from="1538981571608" duration="4363000" />
-      <workItem from="1538995558324" duration="62000" />
+      <workItem from="1538995558324" duration="736000" />
     </task>
     <task id="LOCAL-00001" summary="Changelost">
       <created>1538635405629</created>
@@ -336,7 +336,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30697000" />
+    <option name="totallyTimeSpent" value="31371000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -354,7 +354,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32718122" />
-      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.05872483" />
+      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.05033557" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" weight="0.20469798" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.4899329" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32885906" />
@@ -471,13 +471,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/events/ready.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="52" selection-start-column="52" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://eb535604-fe7d-40e2-84f0-78bb20936428/schema/mio/table/users">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -508,8 +501,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/commands/core/eval.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        <state relative-caret-position="253">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/ready.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
         </state>
       </provider>
     </entry>
