@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const cmdDir = fs.readdirSync('./commands/');
-//const config = require('./config.json')
+const config = require('./config.json')
 
 const client = new Discord.Client();
 console.log('`?');
@@ -28,4 +28,4 @@ fs.readdir("./events", (err, files) => {
     });
 });
 
-client.login('NDkxMjc0NjU3MjU3ODgxNjAx.DoFg7A.m2O7fxD5oPUPz7Hk7jktDDrRXRY');
+client.login(config.token);
