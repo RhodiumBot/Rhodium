@@ -11,7 +11,7 @@ module.exports = async (client, msg) => {
         let args = msg.content.substr(prefix.length + invoke.length).split(" ");
         if(client.commands.has(invoke)) {
             if(client.commands.get(invoke)[0].info.enabled !== true) return;
-            let entry = await user.findOne({ where: { user: msg.author.id }});
+            /*let entry = await user.findOne({ where: { user: msg.author.id }});
             let level;
             if(!entry) {
                 user.create({
@@ -28,7 +28,8 @@ module.exports = async (client, msg) => {
             } else {
                 level = entry.commandlevel;
             }
-            if(!(client.commands.get(invoke)[0].info.level <= level)) return msg.channel.send('Nicht ausreichendes Level!');
+            if(client.commands.get(invoke)[0].info.level > level) return msg.channel.send('Nicht ausreichendes Level!');
+            else if(client.commands.get(invoke)[0].info.level == level || client.commands.get(invoke)[0])*/
             client.commands.get(invoke)[0].run(msg, args, client);
         }
     }

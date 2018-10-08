@@ -1,4 +1,4 @@
-const { connection } = require('../utils/database')
+const { connection } = require('../utils/database');
 module.exports = async (client) => {
     console.log(`Started Up!`);
     try {

@@ -19,6 +19,7 @@
   "dependencies": {
     "discord.js": "^11.4.2",
     "mysql2": "^1.6.1",
-    "sequelize": "^4.39.0"
+    "sequelize": "^4.39.0",
+    "snekfetch": "^4.0.4"
   }
 }
