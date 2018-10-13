@@ -3,9 +3,9 @@ const { connection, user } = require('../utils/database');
 
 module.exports = async (client, msg) => {
     if(msg.content == `<@${client.user.id}>`){
-        msg.channel.send(client.emojis.get('491271120595582978') + " ");
+        msg.channel.send("Mein prefix ist: r!");
     }
-    let prefix = 'm!';
+    let prefix = 'r!';
     if(msg.content.startsWith(prefix)){
         let invoke = msg.content.substr(prefix.length).split(" ")[0].toLowerCase();
         let args = msg.content.substr(prefix.length + invoke.length).split(" ");
