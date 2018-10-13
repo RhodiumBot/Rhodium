@@ -7,7 +7,7 @@ module.exports.run = async (msg, args, client) => {
         picture = msg.mentions.users.first().avatarURL+"?size=128";
         text = await args.join(" ").replace(`<@!${msg.mentions.members.first().id}>`, "").replace(`<@${msg.mentions.members.first().id}>`, "")
     } else {
-        text = args.join(" ");
+        text = await args.join(" ");
         picture = "https://cdn.discordapp.com/emojis/495931857620434944.png?v1";
     }
     let res = await snekfetch.post(`http://localhost:8081/api/image/achievement`)
