@@ -2,11 +2,12 @@ const Discord   = require('discord.js');
 const snekfetch = require('snekfetch');
 module.exports.run = async (msg, args, client) => {
     let picture;
+    let text;
     if(msg.mentions.members.first()) {
         picture = msg.mentions.users.first().avatarURL+"?size=128";
-        let text = await args.join(" ").replace(`<@!${msg.mentions.members.first().id}>`, "").replace(`<@${msg.mentions.members.first().id}>`, "")
+        text = await args.join(" ").replace(`<@!${msg.mentions.members.first().id}>`, "").replace(`<@${msg.mentions.members.first().id}>`, "")
     } else {
-        let text = args.join(" ");
+        text = args.join(" ");
         picture = "https://cdn.discordapp.com/emojis/495931857620434944.png?v1";
     }
     let res = await snekfetch.post(`http://localhost:8081/api/image/achievement`)
