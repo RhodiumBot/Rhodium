@@ -21,9 +21,6 @@ module.exports = {
             emb.setTitle(title)
         }
         chan.send('', emb)
-            .then((msg) => {
-                setTimeout(() => msg.delete(), 5000)
-            })
     },
 
     info(chan, cont, title, thumb, url){
@@ -50,7 +47,6 @@ module.exports = {
         var sentmsg = chan.send('', emb)
         return sentmsg
     },
-
     afk(chan, cont, title, msg, avatar){
 
         var emb = new RichEmbed()

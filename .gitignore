@@ -1,3 +1,6 @@
+#configuration files
+config.json
+
 # Logs
 logs
 *.log
@@ -63,3 +66,4 @@ typings/
 
 # idea ordner
 .idea/
+.vscode/

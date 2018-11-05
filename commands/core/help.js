@@ -17,7 +17,7 @@ module.exports.run = async (msg, args, client) => {
             };
 
             var listing=[];
-            var categs = ["core"];
+            var categs = ["Core", "Memes", "Social", "Developer"];
             //var categs = client
             let level = await user.findOne({ where: { user: msg.author.id}});
             //if(msg.channel.nsfw) categs.push("NSFW");
@@ -27,7 +27,7 @@ module.exports.run = async (msg, args, client) => {
             categs.forEach((category, cti) => {
                 listing[cti] = [category, " "];
                 commandlist.values.forEach((k, i) => {
-                    if(k[2] == category.toLowerCase()) listing[cti][1]+="`"+commandlist.keys[i]+"`, "//+k[1]+"\n"
+                    if(k[1] == category.toLowerCase()) listing[cti][1]+="`"+commandlist.keys[i]+"`, "//+k[1]+"\n"
                 });
                 if(listing[cti][1]==" ") listing[cti][1]="No commands listed in this category."
                 else listing[cti][1] = listing[cti][1].substr(0, listing[cti][1].length - 2)

@@ -5,14 +5,15 @@ module.exports.run = async (msg, args, client) => {
         return msg.channel.send(':no_entry_sign: No rights!')
     }*/
     befehl = args.join(' ');
-    if (befehl.includes('delete')) {
-        return msg.channel.send(':no_entry_sign: delete is blacklisted!')
+    if(befehl.charAt(befehl.length != ";")) befehl+=";"
+    if (befehl.toLowerCase().includes('delete')) {
+        return client.embed.error(msg.channel, '```not today```', ':no_entry_sign: "delete" is blacklisted!');
     }
     try {
         let ergebnis = await connection.query(befehl);
-        msg.channel.send('SQLed!! Ergebnis: ' + ergebnis)
+        client.embed.success(msg.channel, '```' + ergebnis + '```', ':white_check_mark: SQL finished successfully.')
     } catch(e) {
-        msg.channel.send('Error: ' + e.message)
+        return client.embed.error(msg.channel, '```' + e.message + '```', ':warning: SQL returned an error');
     }
     
 };
@@ -20,5 +21,5 @@ module.exports.run = async (msg, args, client) => {
 module.exports.info = {
     description: "SQL Command",
     level: 6,
-    enabled: false
+    enabled: true
 }
