@@ -38,6 +38,6 @@ module.exports.run = async (msg, args, client) => {
 
 exports.info = {
     description: "Shows a list of all commands.",
-    level: 0,
+    level: 1,
     enabled: true
 };

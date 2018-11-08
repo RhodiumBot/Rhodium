@@ -10,7 +10,7 @@ module.exports = async (client, msg) => {
         let invoke = msg.content.substr(prefix.length).split(" ")[0].toLowerCase();
         let args = msg.content.substr(prefix.length + invoke.length).split(" ");
         if(client.commands.has(invoke)) {
-            if(client.commands.get(invoke)[0].info.enabled !== true) return;
+            if(client.commands.get(invoke)[0].info.enabled !== true) return client.embed.error(msg.channel, '``` This command is currently disabled. ```', ':x:');
             let entry = await user.findOne({ where: { user: msg.author.id }});
             let level;
             if(!entry) {
@@ -30,7 +30,7 @@ module.exports = async (client, msg) => {
             } else {
                 level = entry.commandlevel;
             }
-            if(client.commands.get(invoke)[0].info.level > level) return msg.channel.send('Nicht ausreichendes Level!');
+            if(client.commands.get(invoke)[0].info.level > level) return msg.channel.send('Your level is not high enough: ' + entry.commandlevel);
             else if(client.commands.get(invoke)[0].info.level == level || client.commands.get(invoke)[0])
             client.commands.get(invoke)[0].run(msg, args, client);
         }

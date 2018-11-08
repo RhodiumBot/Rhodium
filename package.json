@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Ron31/Mio#readme",
   "dependencies": {
+    "canvas": "^2.0.1",
     "discord.js": "^11.4.2",
     "mysql2": "^1.6.1",
     "sequelize": "^4.39.0",
