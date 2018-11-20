@@ -2,13 +2,14 @@ const { connection, user } = require('../utils/database');
 
 
 module.exports = async (client, msg) => {
-    let prefix = '>>';
+    let prefix = client.config.prefix;
+    msg.prefix = prefix;
     if(msg.content == `<@${client.user.id}>`){
-        msg.channel.send("My prefix is `" + prefix + "`");
+        client.embed.uni(msg, `Hello, my name is ${client.user.username}!`, `${client.config.applicationName} ${client.vars.emojiIcons.at} ${client.config.version} - A multifunctional bot for your discord server.`, [[`${client.vars.emojiIcons.containstart} Prefix`, `My default prefix is \`${client.config.prefix}\`.\nMy prefix on this guild is \`${client.config.prefix}\`.`, true]], 0xff0088, null, null, client.user.avatarURL, await client.generateInvite(8))
     }
     if(msg.content.startsWith(prefix)){
         let invoke = msg.content.substr(prefix.length).split(" ")[0].toLowerCase();
-        let args = msg.content.substr(prefix.length + invoke.length).split(" ");
+        let args = msg.content.substr(prefix.length + invoke.length + 1).split(" ");
         if(client.commands.has(invoke)) {
             if(client.commands.get(invoke)[0].info.enabled !== true) return client.embed.error(msg.channel, '``` This command is currently disabled. ```', ':x:');
             let entry = await user.findOne({ where: { user: msg.author.id }});
@@ -32,7 +33,14 @@ module.exports = async (client, msg) => {
             }
             if(client.commands.get(invoke)[0].info.level > level) return msg.channel.send('Your level is not high enough: ' + entry.commandlevel);
             else if(client.commands.get(invoke)[0].info.level == level || client.commands.get(invoke)[0])
-            client.commands.get(invoke)[0].run(msg, args, client);
+            
+            try{
+                client.commands.get(invoke)[0].run(msg, args, client);
+            }
+            catch (err){
+                console.log(err)
+            }
+
         }
     }
 };

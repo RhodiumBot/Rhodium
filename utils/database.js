@@ -1,5 +1,9 @@
 const Sequelize = require('sequelize');
 
+module.exports.run = client => {
+    console.log("This util has no run function.")
+}
+
 const database = new Sequelize('Mio', 'root', '', {
     host: 'localhost',
     dialect: 'mysql'

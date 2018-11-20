@@ -20,7 +20,9 @@
     "canvas": "^2.0.1",
     "discord.js": "^11.4.2",
     "mysql2": "^1.6.1",
+    "ping": "^0.2.2",
     "sequelize": "^4.39.0",
-    "snekfetch": "^4.0.4"
+    "snekfetch": "^4.0.4",
+    "systeminformation": "^3.47.0"
   }
 }

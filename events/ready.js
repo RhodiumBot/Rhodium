@@ -1,11 +1,13 @@
-const { connection } = require('../utils/database');
+let presences = ["Currently in rewrite!"]
+
 module.exports = async (client) => {
-    console.log(`Started Up!`);
-    /*try {
-        connection.sync();
-        console.log('Synced!')
-    } catch(e) {
-        console.log(e);
-    }*/
-    //status loop?
+    client.utils.get("config-variables").run(client);
+    console.log()
+    console.log(`----------------------------------------------`)
+    console.log(`Successfully logged in as ${client.user.tag}`);
+    console.log(`----------------------------------------------`)
+    
+    setInterval(() => {
+        client.user.setPresence({status: "online", game: {name: presences[Math.round(Math.random() * presences.length)]}})
+    }, 30000)
 };

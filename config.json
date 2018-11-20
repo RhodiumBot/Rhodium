@@ -1,4 +1,7 @@
 {
-  "token":"NTA5MDMzNDc5MTA4MDM0NTYw.DsImIg.E6DfWGsDByCXEhRlM5rvgWpm5ck",
+  "applicationName": "MioBot",
+  "token":"NTA5MDMzNDc5MTA4MDM0NTYw.Dsh-Kg.R2CeZIltaXlO6m1gzBASfbeQm5U",
+  "prefix": ">>",
+  "version": "0.2.5b",
   "developers": ["301613319998013440", "224084384054116352"]
 }

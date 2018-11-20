@@ -3,7 +3,7 @@ const { user } = require('../../utils/database');
 module.exports.run = async (msg, args, client) => {
         if(args[0]){
             if(client.commands.has(args[0])){
-                msg.channel.send("**.."+args[0]+"**: "+client.commands.get(args[0])[1].description);
+                msg.channel.send(`**${msg.prefix + args[0]}**: `+client.commands.get(args[0])[0].info.description);
             }
             else{
                 msg.channel.send(msg.author +", that command doesn't exist!");

@@ -128,6 +128,32 @@ module.exports = {
             .setFooter(type);
 
         msg.channel.send("", emb)
-    }
+    },
+
+
+    
+
+    uni(msg, title, description, contents, color, footer, image, thumbnail, url){
+
+        let emb = new RichEmbed()
+            .setColor(color || "0xff0050")
+            .setDescription(description || "No description set.")
+
+            .setTitle(title || "No title set.")
+            .setFooter((footer ? (footer.content ? footer.content : footer) : ""), (footer ? (footer.icon ? footer.icon : footer) : ""))
+            .setThumbnail(thumbnail || "")
+            .setImage(image || "")
+            .setURL(url || "")
+
+        if(contents && (typeof contents != "undefined" || contents !=[])){
+            contents.forEach(element => {
+                emb.addField(element[0], element[1], element[2])
+            });
+        }
+
+
+        var message = msg.channel.send('', emb)
+        return {emb, message}
+    },
 
 }

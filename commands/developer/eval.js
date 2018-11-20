@@ -5,9 +5,9 @@ module.exports.run = async (msg, args, client) => {
         return msg.channel.send(':no_entry_sign: No rights!')
     }*/
     let silent = false;
-    if (args[1].toLowerCase() == "-s"){
+    if (args[0].toLowerCase() == "-s"){
         silent = true;
-        args[1] = "";
+        args[0] = "";
         msg.delete();
     }
     befehl = args.join(' ');
