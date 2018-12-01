@@ -1,6 +1,6 @@
 const { user } = require("../../utils/database.js");
 const levels = [':zero:', ':one:', ':two:', ':three:', ':four:', ':five:', ':six:']
-const Canvas = require("canvas");
+//const Canvas = require("canvas");
 
 module.exports.run = async (msg, args, client) => {
     let userm;
@@ -35,7 +35,7 @@ module.exports.run = async (msg, args, client) => {
     client.embed.success(msg.channel, '**' + entry.title + '\n\n*' + entry.description + '*\n\n**Credits: ' + entry.credits + '\nGlobal XP: ' + entry.globalxp +' \nGlobal Level: ' + entry.globallvl +'\nYour command execution level: ' + levels[entry.commandlevel] + (entry.devmsgmuted ? "\n\n**WARNING:** You're muted for sending dev messages." : "") + (entry.commandlevel == 0 ? "\n\n**WARNING:** Your command level is :zero: ." : ""), (entry.user == "301613319998013440" ? "<a:doggo:470915769950011393>" : "") + 'User profile for ' + entry.name + ` ${(client.users.get(entry.user).bot ? client.emojis.get("510822364330852362") : "")} (ID: ${entry.id})`)
 
 
-
+/*
     var Image = Canvas.Image
     var canvas = Canvas.createCanvas(400, 300)
     var ctx = canvas.getContext('2d');
@@ -64,7 +64,7 @@ module.exports.run = async (msg, args, client) => {
     var finalimage=canvas.toBuffer()
     msg.channel.send(msg.author, {
         "file": finalimage // Or replace with FileOptions object
-    })
+    })*/
 }
 
 

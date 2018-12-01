@@ -30,7 +30,6 @@ module.exports.run = async (msg, args, client) => {
         [
             `Guilds`,
             `${client.vars.emojiIcons.servernetwork} ${client.guilds.size}
-            ${client.vars.emojiIcons.subarrow}${client.guilds.map(g => g).join(`\n${client.vars.emojiIcons.subarrow}`)}
             ${client.vars.emojiIcons.accountmultiple} ${client.users.size}`,
             true
         ],

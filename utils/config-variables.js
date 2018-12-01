@@ -8,7 +8,7 @@ module.exports.run = async client => {
             accesspointnetwork: client.emojis.get("511137774162804736"),
             servernetwork: client.emojis.get("511161165443760138"),
             accountmultiple: client.emojis.get("511241556284538915"),
-            nodejs: client.emojis.get("511163319692951573"), 
+            nodejs: client.emojis.get("511163319692951573"),
             history: client.emojis.get("511164996177362944"),
             memory: client.emojis.get("511227987589464075"),
             chip: client.emojis.get("511227987925139507"),
