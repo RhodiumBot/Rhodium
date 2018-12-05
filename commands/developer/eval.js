@@ -7,10 +7,11 @@ module.exports.run = async (msg, args, client) => {
     let silent = false;
     if (args[0].toLowerCase() == "-s"){
         silent = true;
-        args[0] = "";
+        args.shift();
         msg.delete();
     }
     befehl = args.join(' ');
+    console.log(befehl)
     try {
         let ergebniss = await eval(befehl)
         if(!silent)client.embed.success(msg.channel, '```' + ergebniss + '```', '<a:success:471096765613998080> Eval finished successfully.')

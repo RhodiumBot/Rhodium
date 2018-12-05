@@ -1,6 +1,26 @@
+const DJS = require("discord.js");
+
 module.exports.run = async (msg, args, client) => {
-    client.utils.get("pages").singleContent(msg, "List of all guilds", "This is on which server's I'm currently on:", client.guilds.map(g => g).join(`,\n`), client)
-    
+    if(args.join(" ").includes("-l")){
+        let contents = [];
+
+        client.guilds.map(i => i).forEach((guild, index) => {
+
+            let serverInfo = new DJS.RichEmbed()
+                .setTitle(guild.name)
+                .setThumbnail(guild.iconURL)
+                .setDescription(`${client.vars.emojiIcons.accountmultiple} ${guild.members.size}
+                ${client.vars.emojiIcons.accountstar} ${guild.owner.user}
+                ${(guild.me && guild.me.nickname ? `${client.vars.emojiIcons.at} ${guild.me.nickname}` : "")}`)
+                .setFooter(`Page ${index+1}/${client.guilds.size}`);
+
+            contents.push(serverInfo)
+        })
+
+        client.utils.get("pages").multiContent(msg, contents, client)
+    }
+    else client.utils.get("pages").singleContent(msg, "List of all guilds", "This is on which server's I'm currently on:", client.guilds.map(g => g).join(`,\n`), client)
+
 }
 
 module.exports.info = {
