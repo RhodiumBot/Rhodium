@@ -22,4 +22,9 @@ console.log("");
 client.utils.get("parseCommands").run(client);
 client.utils.get("parseEvents").run(client);
 
-client.login(config.token);
+let token = config.token
+if(process.argv[2]){
+    token = process.argv[2];
+}
+
+client.login(token);

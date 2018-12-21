@@ -65,7 +65,7 @@ module.exports.run = async (msg, args, client) => {
     // Description
     `[Visit my creators](https://rmcprod.me) | [Invite me](${await client.generateInvite(8)}) | [Support server](https://discord.gg/4GN58jw)`, 
 
-    contents, 0x008fff, {content: "Powered by Tojo DDoS protection", icon: "https://cdn.discordapp.com/attachments/510821805108232199/511227269503778817/Unbenannt.gif"}, null, client.user.avatarURL, null);
+    contents, 0x008fff, {content: "Powered by Heinle IT Sys", icon: "https://scontent.fham1-1.fna.fbcdn.net/v/t1.0-9/41467921_684403271915381_4860305925547753472_n.jpg?_nc_cat=105&_nc_ht=scontent.fham1-1.fna&oh=b5a1d18bcb16655ce61caeb9bc6bc5d3&oe=5CA1A8F4"}, null, client.user.avatarURL, null);
 
     // Get latency
     ping.promise.probe('discordapp.com').then(result => {
