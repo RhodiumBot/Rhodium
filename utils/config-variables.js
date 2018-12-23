@@ -18,6 +18,7 @@ module.exports.run = async client => {
             subarrow: client.emojis.get("514469414909771786"),
             gap: client.emojis.get("514471507775193098"),
             accountstar: client.emojis.get("518455482768424970"),
+            accountheart: client.emojis.get("525690626247884819"),
 
             animated: {
                 loading: client.emojis.get("510822371549249546")
