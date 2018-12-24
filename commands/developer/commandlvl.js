@@ -25,7 +25,8 @@ module.exports.run = async (msg, args, client) => {
 };
 
 module.exports.info = {
-    description: "Exclude a user from executing commands (without second argument). Use second argument to specify another level.",
+    description: "(without second argument) Excludes a user from executing commands. \nUse second argument to specify a level.",
     level: 6,
-    enabled: true
+    enabled: true,
+    usage: ["@user", "<UserID>", "@user <level>", "<UserID> <level>"]
 }

@@ -69,7 +69,8 @@ module.exports.run = async (msg, args, client) => {
 
 
 module.exports.info = {
-    description: "Shows your profile.",
+    description: "Shows your or a specific user's profile.",
     level: 0,
-    enabled: true
+    enabled: true,
+    usage: ["", "@user", "<UserID>"]
 }

@@ -44,5 +44,6 @@ module.exports.run = async (msg, args, client) => {
 exports.info = {
     description: "Gives you useful tips when producing music.",
     level: 1,
-    enabled: true
+    enabled: true,
+    usage: ["", "<tip_ID>"]
 };

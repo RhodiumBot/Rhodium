@@ -32,5 +32,6 @@ module.exports.run = async (msg, args, client) => {
 module.exports.info = {
     description: "Checks a Discord API token for functionality.",
     level: 6,
-    enabled: true
+    enabled: true,
+    usage: ["<token>"]
 }

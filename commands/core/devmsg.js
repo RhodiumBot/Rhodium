@@ -6,11 +6,12 @@ module.exports.run = async (msg, args, client) => {
         client.embed.success(msg.channel, '```' + args.join(' ') + '```', '<a:success:471096765613998080> Your developer message has been successfully sent.')
         msg.delete()
     }
-    else client.embed.error(msg.channel, '```Also give a message the developers should recieve!\n\nUsage:\n>>devmsg Hello, I found a bug!```', ':no_entry_sign: You used this command wrong.');
+    else client.embed.error(msg.channel, '```Also give a message the developers should recieve!```', ':no_entry_sign: You used this command wrong.');
 };
 
 module.exports.info = {
 description: "Sends a message to the developers of this bot.",
 level: 1,
-enabled: true
+enabled: true,
+usage: ["<Your message>"]
 };

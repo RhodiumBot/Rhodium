@@ -26,5 +26,6 @@ module.exports.run = async (msg, args, client) => {
 module.exports.info = {
     description: "Guild List",
     level: 6,
-    enabled: true
+    enabled: true,
+    usage: ["", "-l"]
 }

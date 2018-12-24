@@ -19,9 +19,16 @@ module.exports.run = async client => {
             gap: client.emojis.get("514471507775193098"),
             accountstar: client.emojis.get("518455482768424970"),
             accountheart: client.emojis.get("525690626247884819"),
+            earth: client.emojis.get("526722785234518026"),
+            robot: client.emojis.get("526724896416333824"),
+            human: client.emojis.get("526724896437305347"),
+            text: client.emojis.get("526729850921156610"),
+            voice: client.emojis.get("526729851319615498"),
+            accountquestion: client.emojis.get("526732603483619338"),
 
             animated: {
-                loading: client.emojis.get("510822371549249546")
+                loading: client.emojis.get("510822371549249546"),
+                accesspointnetwork: client.emojis.get("526397962931404810")
             }
         }
     }

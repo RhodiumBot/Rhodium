@@ -18,5 +18,5 @@ module.exports.run = async (msg, args, client) => {
 module.exports.info = {
     description: "triggered",
     level: 0,
-    enabled: true
+    enabled: false
 };

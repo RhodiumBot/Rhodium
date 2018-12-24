@@ -144,6 +144,7 @@ module.exports = {
             .setThumbnail(thumbnail || "")
             .setImage(image || "")
             .setURL(url || "")
+            .setTimestamp();
 
         if(contents && (typeof contents != "undefined" || contents !=[])){
             contents.forEach(element => {

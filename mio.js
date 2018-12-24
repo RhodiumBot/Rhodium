@@ -10,7 +10,7 @@ client.utils = new Map;
 client.config = config;
 
 // Parse Utils
-console.log("Parsing utils");
+console.log("Parsing utils".blue);
 for (let file of fs.readdirSync('./utils/')) {
     console.log("- Loading file " + file.split(".")[0]);
     if (!file.endsWith('.js')) return;

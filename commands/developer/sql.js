@@ -19,7 +19,8 @@ module.exports.run = async (msg, args, client) => {
 };
 
 module.exports.info = {
-    description: "SQL Command",
+    description: "Execute SQL queries.",
     level: 6,
-    enabled: true
+    enabled: true,
+    usage: ["SELECT * FROM stuff"]
 }

@@ -18,7 +18,8 @@ module.exports.run = async (msg, args, client) => {
 };
 
 module.exports.info = {
-    description: "Sends the emote with the given ID.",
+    description: "Generates a minecraft achievement",
     level: 0,
-    enabled: true
+    enabled: false,
+    usage: ["<some text>", "@user <some text>"]
 };

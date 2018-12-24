@@ -6,5 +6,6 @@ module.exports.run = async (msg, args, client) => {
 module.exports.info = {
     description: "Gives out the given string.",
     level: 3,
-    enabled: true
+    enabled: true,
+    usage:["some text"]
 };

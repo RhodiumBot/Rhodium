@@ -1,4 +1,8 @@
-let presences = ["Currently in rewrite!"]
+const config = require('../config.json')
+const colors = require('colors')
+
+
+let presences = ["Currently in rewrite!", `Running version ${config.version}`]
 
 module.exports = async (client) => {
     client.utils.get("config-variables").run(client);

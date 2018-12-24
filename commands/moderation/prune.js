@@ -24,8 +24,9 @@ module.exports.run = async (msg, args, client) => {
 };
 
 module.exports.info = {
-    description: "Sends the emote with the given ID.",
+    description: "Bulk deletes messages from a channel.",
     level: 0,
     permissions: 8192,
-    enabled: true
+    enabled: true,
+    usage: ["<number>"]
 };

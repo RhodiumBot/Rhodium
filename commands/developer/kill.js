@@ -14,5 +14,6 @@ module.exports.run = async (msg, args, client) =>{
 module.exports.info = {
     description: "Emergency kill the bot. Use parameter `force` to force a crash.",
     level: 0,
-    enabled: true
+    enabled: true,
+    usage: ["", "force"]
 };
