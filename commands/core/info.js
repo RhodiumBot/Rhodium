@@ -24,7 +24,8 @@ module.exports.run = async (msg, args, client) => {
         ],
         [
             `Interface`,
-            `${client.vars.emojiIcons.animation} ${client.config.version}`,
+            `${client.vars.emojiIcons.containstart} \`${client.config.prefix}\` (global)
+            ${(client.config.prefix!=msg.prefix ? `${client.vars.emojiIcons.containstart} \`${msg.prefix}\` (local)` : "")}`,
             true
         ],
         [

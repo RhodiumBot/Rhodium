@@ -15,16 +15,12 @@ let Users = database.define('users', {
         type: Sequelize.STRING(300),
         allowNull: false
     },
-    name: {
-        type: Sequelize.STRING(200),
-        allowNull: false
-    },
     commandlevel: {
       type: Sequelize.INTEGER,
       allowNull: false
     },
     credits: {
-        type: Sequelize.STRING(200),
+        type: Sequelize.INTEGER,
         allowNull: false
     },
     afk: {
