@@ -13,7 +13,7 @@ module.exports.singleContent = async (msg, title, description, content, client) 
         .setTitle(title)
         .setDescription(description)
         .setFooter(`Page ${page+1}/${content.length}`)
-        .setColor(0xFF0088)
+        .setColor(0xffc600)
         .addField("Content", content[page], true);
 
     msg.channel.send(embed).then(async reactor => {

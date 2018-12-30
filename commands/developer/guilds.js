@@ -12,8 +12,8 @@ module.exports.run = async (msg, args, client) => {
                 .setDescription(`${client.vars.emojiIcons.accountmultiple} ${guild.members.size}
                 ${client.vars.emojiIcons.accountstar} ${guild.owner.user}
                 ${(guild.me && guild.me.nickname ? `${client.vars.emojiIcons.at} ${guild.me.nickname}\n` : "")}${(guild.me.hasPermission("ADMINISTRATOR") ? `${client.vars.emojiIcons.accountheart} Has admin` : "")}`)
-                .setFooter(`Page ${index+1}/${client.guilds.size}`);
-
+                .setFooter(`Page ${index+1}/${client.guilds.size}`)
+                .setColor(0xffc600);
             contents.push(serverInfo)
         })
 

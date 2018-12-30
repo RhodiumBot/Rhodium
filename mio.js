@@ -3,7 +3,7 @@ const fs = require('fs');
 const config = require('./config.json')
 
 const client = new Discord.Client();
-client.embed = require('./embed');
+client.embed = require('./utils/embed');
 client.groups = [];
 client.commands = new Map;
 client.utils = new Map;

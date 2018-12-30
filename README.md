@@ -1,4 +1,4 @@
-**MIO**
+**Rhodium**
 
 Hey There! We're just two hobby developers working together on this little bot.
 

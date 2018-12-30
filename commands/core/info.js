@@ -81,7 +81,7 @@ module.exports.run = async (msg, args, client) => {
 
     // Get latency
     ping.promise.probe('discordapp.com').then(result => {
-        contents[4][1]=`${client.vars.emojiIcons.accesspointnetwork} -> discordapp.com: ${result.time}ms\n${client.vars.emojiIcons.accesspointnetwork} -> Discord API: ${client.ping}ms`
+        contents[4][1]=`${client.vars.emojiIcons.accesspointnetwork} -> discordapp.com: ${result.time}ms\n${client.vars.emojiIcons.accesspointnetwork} -> Discord API: ${Math.round(client.ping)}ms`
         embed.emb.fields = [];
         contents.forEach(element => {
             embed.emb.addField(element[0], element[1], element[2])
