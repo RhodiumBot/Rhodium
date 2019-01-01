@@ -25,6 +25,13 @@ module.exports.run = async client => {
             text: client.emojis.get("526729850921156610"),
             voice: client.emojis.get("526729851319615498"),
             accountquestion: client.emojis.get("526732603483619338"),
+            percent: client.emojis.get("529019410644729876"),
+            star: client.emojis.get("529027373379616779"),
+            numeric: client.emojis.get("529030246138380288"),
+            chevronleft: client.emojis.get("529277168916889610"),
+            chevronright: client.emojis.get("529277168807575552"),
+            close: client.emojis.get("529277168761700359"),
+            check: client.emojis.get("529699429566119946"),
 
             animated: {
                 loading: client.emojis.get("510822371549249546"),

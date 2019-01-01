@@ -1,10 +1,22 @@
 const config = require('../config.json')
-const colors = require('colors')
+const fs = require('fs')
 
 
-let presences = ["Currently in rewrite!", `Running version ${config.version}`, `Screw you, Cuprum.`]
+let presences = [`Running version ${config.version}`, `Screw you, Cuprum.`, `melts at 1.964°C.`, `45`, `12,38 g/cm3`]
 
 module.exports = async (client) => {
+
+    if(client.update && client.update.applied == false){
+        client.channels.get(client.update.channel).send(`Update applied. Running version ${config.version}`)
+        client.channels.get(client.update.channel).fetchMessage(client.update.message).then(message => {
+            message.edit(`Update applied. Running version ${config.version}`)
+        })
+
+        
+        client.update.applied = true
+        fs.writeFileSync('update.json', JSON.stringify(client.update))
+    }
+
     client.utils.get("config-variables").run(client);
     console.log()
     console.log(`----------------------------------------------`)

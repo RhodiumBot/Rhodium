@@ -8,10 +8,10 @@ const DJS = require("discord.js");
 module.exports = async (client, msg) => {
     let prefix = client.config.prefix;
     msg.prefix = prefix;
-    if (msg.content == `<@${client.user.id}>`) {
+    if (msg.content == `<@${client.user.id}>` || msg.content == `<@!${client.user.id}>`) {
         client.embed.uni(msg, `Hello, my name is ${client.user.username}!`, `${client.config.applicationName} ${client.vars.emojiIcons.at} ${client.config.version} - A multifunctional bot for your discord server.`, [
             [`${client.vars.emojiIcons.containstart} Prefix`, `My default prefix is \`${client.config.prefix}\`.\nMy prefix on this guild is \`${client.config.prefix}\`.`, true]
-        ], 0xffc600, null, null, client.user.avatarURL, await client.generateInvite(8))
+        ], 0xffc600, null, null, client.user.displayAvatarURL, await client.generateInvite(8))
     }
     if (msg.content.startsWith(prefix)) {
         let invoke = msg.content.substr(prefix.length).split(" ")[0].toLowerCase();

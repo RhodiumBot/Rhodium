@@ -65,7 +65,7 @@ module.exports = {
             .setDescription(description)
 
             .setTitle(title)
-            .setFooter("Server ID: "+msg.guild.id, msg.author.avatarURL)
+            .setFooter("Server ID: "+msg.guild.id, msg.author.displayAvatarURL)
             .setThumbnail(msg.guild.iconURL)
 
         contents.forEach(element => {
@@ -108,7 +108,7 @@ module.exports = {
             .setTitle(title)
 
         color && emb.setColor(color)
-        footer && emb.setFooter(footer, msg.author.avatarURL)
+        footer && emb.setFooter(footer, msg.author.displayAvatarURL)
         thumbnail && emb.setThumbnail(thumbnail)
 
         contents.forEach(element => {
@@ -133,7 +133,7 @@ module.exports = {
 
     
 
-    uni(msg, title, description, contents, color, footer, image, thumbnail, url){
+    uni(msg, title, description, contents, color, footer, image, thumbnail, url, addition){
 
         let emb = new RichEmbed()
             .setColor(color || "0xff0050")
@@ -153,7 +153,7 @@ module.exports = {
         }
 
 
-        var message = msg.channel.send('', emb)
+        var message = msg.channel.send((addition ? addition : ""), emb)
         return {emb, message}
     },
 

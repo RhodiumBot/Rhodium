@@ -1,5 +1,6 @@
 const ping = require("ping");
 const os = require("os");
+const fs = require("fs");
 const si = require("systeminformation")
 
 module.exports.run = async (msg, args, client) => {
@@ -63,7 +64,8 @@ module.exports.run = async (msg, args, client) => {
         [
             `CPU`,
             `${client.vars.emojiIcons.chip} ${os.cpus()[0].model.split("@")[0]}
-            ${client.vars.emojiIcons.gauge} ${Object.keys(os.cpus()).length}x${(os.cpus()[0].speed / 1000).toFixed(2)}GHz`,
+            ${client.vars.emojiIcons.gauge} ${Object.keys(os.cpus()).length}x${(os.cpus()[0].speed / 1000).toFixed(2)}GHz
+            ${client.vars.emojiIcons.percent} ${Math.round((await si.currentLoad()).currentload)}%`,
             true
         ],
         [
@@ -77,7 +79,7 @@ module.exports.run = async (msg, args, client) => {
     // Description
     `[Creator's homepage](https://rmcprod.me) | [Invite me](${await client.generateInvite(8)}) | [Support server](https://discord.gg/4GN58jw) | [GitHub Repo](https://github.com/Ron31/ron31apibot)`, 
 
-    contents, 0x008fff, {content: "Powered by Heinle IT Sys", icon: "https://scontent.fham1-1.fna.fbcdn.net/v/t1.0-9/41467921_684403271915381_4860305925547753472_n.jpg?_nc_cat=105&_nc_ht=scontent.fham1-1.fna&oh=b5a1d18bcb16655ce61caeb9bc6bc5d3&oe=5CA1A8F4"}, null, client.user.avatarURL, null);
+    contents, 0xffc600, {content: "Powered by Heinle IT Sys", icon: "https://scontent.fham1-1.fna.fbcdn.net/v/t1.0-9/41467921_684403271915381_4860305925547753472_n.jpg?_nc_cat=105&_nc_ht=scontent.fham1-1.fna&oh=b5a1d18bcb16655ce61caeb9bc6bc5d3&oe=5CA1A8F4"}, null, client.user.displayAvatarURL, null);
 
     // Get latency
     ping.promise.probe('discordapp.com').then(result => {

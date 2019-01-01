@@ -2,12 +2,29 @@ const Discord = require('discord.js');
 const fs = require('fs');
 const config = require('./config.json')
 
-const client = new Discord.Client();
+var client = new Discord.Client();
+
 client.embed = require('./utils/embed');
 client.groups = [];
 client.commands = new Map;
 client.utils = new Map;
 client.config = config;
+
+
+try{
+    var update = JSON.parse(fs.readFileSync('update.json'))
+}
+catch (err){
+    console.log(err)
+}
+
+if(update && update.applied != true){
+    console.log('Finishing update...')
+    client.update = update;
+}
+
+
+
 
 // Parse Utils
 console.log("Parsing utils".blue);

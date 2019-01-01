@@ -16,6 +16,13 @@ module.exports.run = async (msg, args, client) => {
             `${client.vars.emojiIcons.text} ${msg.guild.channels.filter(c => c.type=="text").size}
             ${client.vars.emojiIcons.voice} ${msg.guild.channels.filter(c => c.type=="voice").size}`,
             true
+        ],,
+        [
+            `Roles (${msg.guild.roles.size})`,
+            `${client.vars.emojiIcons.human} ${msg.guild.roles.filter(c => !c.managed).size} (Normal Roles)
+            ${client.vars.emojiIcons.robot} ${msg.guild.roles.filter(c => c.managed).size} (Bot Roles)
+            -> \`${msg.prefix}roles\` / \`${msg.prefix}roles -l\``,
+            true
         ],
         [
             `Owner (${msg.guild.owner.user.tag})`,

@@ -18,14 +18,14 @@ module.exports.singleContent = async (msg, title, description, content, client) 
 
     msg.channel.send(embed).then(async reactor => {
         if (content[1]) {
-            await reactor.react("◀");
-            await reactor.react("❌");
-            await reactor.react("▶");
+            await reactor.react(client.vars.emojiIcons.chevronleft);
+            await reactor.react(client.vars.emojiIcons.close);
+            await reactor.react(client.vars.emojiIcons.chevronright);
             client.on('messageReactionAdd', async (reaction, user) => {
                 if (reaction.message.id === reactor.id && user.id === msg.author.id && reaction.count == 2) {
-                    if (reaction.emoji == "◀") page--;
-                    else if (reaction.emoji == "▶") page++;
-                    else if (reaction.emoji == "❌") {
+                    if (reaction.emoji == client.vars.emojiIcons.chevronleft) page--;
+                    else if (reaction.emoji == client.vars.emojiIcons.chevronright) page++;
+                    else if (reaction.emoji == client.vars.emojiIcons.close) {
                         reactor.clearReactions();
                         return;
                     }
@@ -47,14 +47,14 @@ module.exports.multiContent = async (msg, content, client) => {
 
     msg.channel.send(content[page]).then(async reactor => {
         if (content[1]) {
-            await reactor.react("◀");
-            await reactor.react("❌");
-            await reactor.react("▶");
+            await reactor.react(client.vars.emojiIcons.chevronleft);
+            await reactor.react(client.vars.emojiIcons.close);
+            await reactor.react(client.vars.emojiIcons.chevronright);
             client.on('messageReactionAdd', async (reaction, user) => {
                 if (reaction.message.id === reactor.id && user.id === msg.author.id) {
-                    if (reaction.emoji == "◀") page--;
-                    else if (reaction.emoji == "▶") page++;
-                    else if (reaction.emoji == "❌") {
+                    if (reaction.emoji == client.vars.emojiIcons.chevronleft) page--;
+                    else if (reaction.emoji == client.vars.emojiIcons.chevronright) page++;
+                    else if (reaction.emoji == client.vars.emojiIcons.close) {
                         reactor.clearReactions();
                         return;
                     }

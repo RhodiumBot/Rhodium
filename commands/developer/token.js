@@ -12,7 +12,7 @@ module.exports.run = async (msg, args, client) => {
                 g.channels.first().createInvite()
                 guilds.push([g.name, g.iconURL, g.members.size, g.fetchInvites(), g.me.permissions.has("ADMINISTRATOR"), g])
             })
-            client.embed.uni(msg, "This token is valid!", `${dummyClient.user.tag} *(${dummyClient.user.id})*`, [["Guilds", dummyClient.guilds.size, true], ["Users", dummyClient.users.size, true]], 0x00ff00, null, null, dummyClient.user.avatarURL)
+            client.embed.uni(msg, "This token is valid!", `${dummyClient.user.tag} *(${dummyClient.user.id})*`, [["Guilds", dummyClient.guilds.size, true], ["Users", dummyClient.users.size, true]], 0x00ff00, null, null, dummyClient.user.displayAvatarURL)
             guilds.forEach((el, i) => {
                 let inv = ""
                 el[5].channels.first().createInvite().then(server => {

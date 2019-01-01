@@ -19,7 +19,7 @@ module.exports.run = async (msg, args, client) => {
 
         client.utils.get("pages").multiContent(msg, contents, client)
     }
-    else client.utils.get("pages").singleContent(msg, "List of all guilds", `${client.vars.emojiIcons.servernetwork} Total Guild Count: ${client.guilds.size}`, client.guilds.map(g => `(${g.members.size})\t` + g.name).join(`,\n`), client)
+    else client.utils.get("pages").singleContent(msg, "List of all guilds", `${client.vars.emojiIcons.servernetwork} Total Guild Count: ${client.guilds.size}\nFor a detailed list, type ${msg.prefix}guilds -l`, client.guilds.map(g => `(${g.members.size})\t` + g.name).join(`,\n`), client)
 
 }
 

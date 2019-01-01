@@ -34,7 +34,7 @@ module.exports.run = async (msg, args, client) => {
                 if(listing[cti][1]==" ") listing[cti][1]="No commands listed in this category."
                 else listing[cti][1] = listing[cti][1].substr(0, listing[cti][1].length - 2)
             });
-            client.embed.help(msg, "List of available commands", `For further information about a command, type \`${msg.prefix}help <command>\``, listing, "0x36393f", "Help", client.user.avatarURL)
+            client.embed.help(msg, "List of available commands", `For further information about a command, type \`${msg.prefix}help <command>\``, listing, "0x36393f", "Help", client.user.displayAvatarURL)
         }
     };
 

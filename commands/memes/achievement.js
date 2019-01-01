@@ -4,7 +4,7 @@ module.exports.run = async (msg, args, client) => {
     let picture;
     let text;
     if(msg.mentions.members.first()) {
-        picture = msg.mentions.users.first().avatarURL+"?size=128";
+        picture = msg.mentions.users.first().displayAvatarURL+"?size=128";
         text = await args.join(" ").replace(`<@!${msg.mentions.members.first().id}>`, "").replace(`<@${msg.mentions.members.first().id}>`, "")
     } else {
         text = await args.join(" ");

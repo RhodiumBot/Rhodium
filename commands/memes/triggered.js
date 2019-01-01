@@ -2,7 +2,7 @@ const Discord   = require('discord.js');
 const snekfetch = require('snekfetch');
 module.exports.run = async (msg, args, client) => {
     if(message.mentions.members.first()) {
-        let picture = msg.mentions.users.first().avatarURL+"?size=128";
+        let picture = msg.mentions.users.first().displayAvatarURL+"?size=128";
         //let text = await args.join(" ").replace(`<@!${msg.mentions.members.first().id}>`, "").replace(`<@${msg.mentions.members.first().id}>`, "")
     } else {
         //let text = args.join(" ");
