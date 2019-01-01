@@ -26,7 +26,7 @@ module.exports.run = async (msg, args, client) => {
                 if(err && stderr != '') {
                     emb.description = emb.description.replace(`${client.vars.emojiIcons.animated.loading} Restarting`, `${client.vars.emojiIcons.close} Restarting`)
                     embmsg.edit(emb)
-                    client.embed.uni(msg, "There was an error with the update.", err, [], 0xff0000)
+                    client.embed.uni(msg, "There was an error with the update.", out + "\n" + stderr, [], 0xff0000)
                 }
             })
         }
