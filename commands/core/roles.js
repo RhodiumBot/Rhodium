@@ -16,7 +16,7 @@ module.exports.run = async (msg, args, client) => {
                 .setTitle(`${role.name} *(${role.id})*`)
                 .setDescription(`${client.vars.emojiIcons.accountmultiple} ${role.members.size} Members
                 ${client.vars.emojiIcons.numeric} Position ${msg.guild.roles.size - role.position+1}
-                ${(role.hoist ? client.vars.emojiIcons.star + " Hoisted (Displayed seperately)\n" : "")}${(role.managed ? client.vars.emojiIcons.robot + " Managed (Bot Role)" : "")}`)
+                ${(role.hoist ? client.vars.emojiIcons.star + " Hoisted (Displayed seperately)\n" : "")}${(role.mentionable ? client.vars.emojiIcons.at + " Mentionable\n" : "")}${(role.managed ? client.vars.emojiIcons.robot + " Managed (Bot Role)" : "")}`)
                 .setFooter(`Page ${index+1}/${msg.guild.roles.size}`)
                 .setColor(role.color)
             contents.push(guildInfo)
