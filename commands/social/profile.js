@@ -15,9 +15,7 @@ module.exports.run = async (msg, args, client) => {
     else {
         userm = msg.author;
     }
-    let entry = await user.findOne({ where: { user: userm.id }});
-    if(!entry) {
-        await user.create({
+    let entry = await user.findOrCreate({ where: { user: userm.id }, defaults: {
             user: userm.id,
             commandlevel: 1,
             credits: 500,
@@ -27,10 +25,10 @@ module.exports.run = async (msg, args, client) => {
             globalxp: 0,
             globallvl: 0,
             devmsgmuted: false
-        });
-    }
-    entry = await user.findOne({ where: { user: userm.id }});
+        }}).catch(err => console.log(err));
+    entry = await user.findOne({ where: { user: userm.id }}).catch(err => console.log(err));
     client.embed.success(msg.channel, '**' + entry.title + '\n\n*' + entry.description + '*\n\n**Credits: ' + entry.credits + '\nGlobal XP: ' + entry.globalxp +' \nGlobal Level: ' + entry.globallvl +'\nYour command execution level: ' + levels[entry.commandlevel] + (entry.devmsgmuted ? "\n\n**WARNING:** You're muted for sending dev messages." : "") + (entry.commandlevel == 0 ? "\n\n**WARNING:** Your command level is :zero: ." : ""), (entry.user == "301613319998013440" ? "<a:doggo:470915769950011393> " : "") + 'User profile for ' + userm.username + ` ${(client.users.get(entry.user).bot ? client.emojis.get("510822364330852362") : "")} (ID: ${entry.id})`)
+ 
 
 
 /*

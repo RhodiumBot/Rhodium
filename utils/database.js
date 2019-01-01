@@ -36,7 +36,7 @@ let Users = database.define('users', {
         type: Sequelize.STRING(200)
     },
     lastclaimed: {
-        type: Sequelize.STRING(200),
+        type: Sequelize.STRING(30),
         allowNull: false
     },
     globalxp: {
@@ -48,7 +48,7 @@ let Users = database.define('users', {
         allowNull: false
     },
     devmsgmuted: {
-        type: Sequelize.BOOLEAN()
+        type: Sequelize.BOOLEAN
     }
 });
 

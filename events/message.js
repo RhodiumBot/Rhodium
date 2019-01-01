@@ -35,7 +35,7 @@ module.exports = async (client, msg) => {
                     globalxp: 0,
                     globallvl: 0,
                     devmsgmuted: false
-                });
+                }).catch(err => err);
                 level = 1;
             } else {
                 level = entry.commandlevel;
