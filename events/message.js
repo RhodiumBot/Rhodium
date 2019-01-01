@@ -27,7 +27,6 @@ module.exports = async (client, msg) => {
             if (!entry) {
                 await user.create({
                     user: msg.author.id,
-                    name: msg.author.username,
                     commandlevel: 1,
                     credits: 500,
                     title: 'Random user',

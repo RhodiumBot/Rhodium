@@ -28,10 +28,9 @@ module.exports.run = async (msg, args, client) => {
             globallvl: 0,
             devmsgmuted: false
         });
-        level = 1;
     }
     entry = await user.findOne({ where: { user: userm.id }});
-    client.embed.success(msg.channel, '**' + entry.title + '\n\n*' + entry.description + '*\n\n**Credits: ' + entry.credits + '\nGlobal XP: ' + entry.globalxp +' \nGlobal Level: ' + entry.globallvl +'\nYour command execution level: ' + levels[entry.commandlevel] + (entry.devmsgmuted ? "\n\n**WARNING:** You're muted for sending dev messages." : "") + (entry.commandlevel == 0 ? "\n\n**WARNING:** Your command level is :zero: ." : ""), (entry.user == "301613319998013440" ? "<a:doggo:470915769950011393> " : "") + 'User profile for ' + entry.name + ` ${(client.users.get(entry.user).bot ? client.emojis.get("510822364330852362") : "")} (ID: ${entry.id})`)
+    client.embed.success(msg.channel, '**' + entry.title + '\n\n*' + entry.description + '*\n\n**Credits: ' + entry.credits + '\nGlobal XP: ' + entry.globalxp +' \nGlobal Level: ' + entry.globallvl +'\nYour command execution level: ' + levels[entry.commandlevel] + (entry.devmsgmuted ? "\n\n**WARNING:** You're muted for sending dev messages." : "") + (entry.commandlevel == 0 ? "\n\n**WARNING:** Your command level is :zero: ." : ""), (entry.user == "301613319998013440" ? "<a:doggo:470915769950011393> " : "") + 'User profile for ' + userm.username + ` ${(client.users.get(entry.user).bot ? client.emojis.get("510822364330852362") : "")} (ID: ${entry.id})`)
 
 
 /*
