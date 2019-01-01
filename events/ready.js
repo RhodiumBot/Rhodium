@@ -5,7 +5,7 @@ const fs = require('fs')
 let presences = [`Running version ${config.version}`, `Screw you, Cuprum.`, `melts at 1.964°C.`, `45`, `12,38 g/cm3`]
 
 module.exports = async (client) => {
-
+    
     if(client.update && client.update.applied == false){
         client.channels.get(client.update.channel).send(`Update applied. Running version ${config.version}`)
         client.channels.get(client.update.channel).fetchMessage(client.update.message).then(message => {
