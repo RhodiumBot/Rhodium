@@ -16,7 +16,7 @@ module.exports.run = async (msg, args, client) => {
         userm = msg.author;
     }
     let entry = await user.findOrCreate({ where: { user: userm.id }, defaults: {
-            user: userm.id,
+            user: userm.id, // MAKE THIS AN UNIQUE KEY
             commandlevel: 1,
             credits: 500,
             title: 'Random user',
