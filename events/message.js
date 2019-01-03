@@ -20,7 +20,6 @@ module.exports = async (client, msg) => {
             if (client.commands.get(invoke)[0].info.enabled !== true) return client.embed.error(msg.channel, '``` This command is currently disabled. ```', ':x:');
             let level;
             let entry = await user.findOrCreate({where: {user: msg.author.id}, defaults: {
-                    user: msg.author.id,
                     commandlevel: 1,
                     credits: 500,
                     title: 'Random user',
