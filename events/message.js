@@ -28,7 +28,7 @@ module.exports = async (client, msg) => {
                     globalxp: 0,
                     globallvl: 0,
                     devmsgmuted: false
-                }).then(user1 => { msg.channel.send("DEBUG: " + user1.toJSON())});
+                }).then(user1 => { msg.channel.send("DEBUG: " + user1.toJSON())}).catch(err => {console.log(err)});
                 level = 1;
                 msg.channel.send("DEBUG: User not found, level = " + level);
             } else {
