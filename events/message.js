@@ -1,7 +1,4 @@
-const {
-    connection,
-    user
-} = require('../utils/database');
+const { connection, user } = require('../utils/database');
 const DJS = require("discord.js");
 
 
