@@ -27,7 +27,7 @@ module.exports = async (client, msg) => {
                     lastclaimed: 0,
                     globalxp: 0,
                     globallvl: 0,
-                    devmsgmuted: false
+                    devmsgmuted: 0
                 }}).catch(err => err);
                 level = entry.level
             if (client.commands.get(invoke)[0].info.level > level) return msg.channel.send('Your level is not high enough: ' + entry.commandlevel);
