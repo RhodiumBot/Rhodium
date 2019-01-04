@@ -17,8 +17,6 @@ module.exports = async (client, msg) => {
             if (client.commands.get(invoke)[0].info.enabled !== true) return client.embed.error(msg.channel, '``` This command is currently disabled. ```', ':x:');
             let level;
             let entry = await user.findOne({ where: {user: msg.author.id} });
-            msg.channel.send(`DEBUG: ${entry}`);
-            msg.channel.send(`DEBUG: ${entry.commandlevel}`);
             if (!entry) {
                 user.create({
                     user: msg.author.id,
