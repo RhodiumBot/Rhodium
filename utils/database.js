@@ -11,8 +11,13 @@ const database = new Sequelize(config.mysql.dbname, config.mysql.username, confi
 });
 
 let Users = database.define('users', {
+    id: {
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        primaryKey: true
+    },
     user: {
-        type: Sequelize.STRING(300),
+        type: Sequelize.STRING(64),
         allowNull: false
     },
     commandlevel: {

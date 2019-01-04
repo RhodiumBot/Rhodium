@@ -1,6 +1,7 @@
 #configuration files
 config.json
 update.json
+tokens.txt
 
 # Logs
 logs
