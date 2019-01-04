@@ -30,4 +30,4 @@ module.exports.info = {
     level: 6,
     enabled: true,
     usage: ["some.code(here)"]
-}
+};

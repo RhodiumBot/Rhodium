@@ -5,6 +5,7 @@ const config = require('./config.json')
 var client = new Discord.Client();
 
 client.embed = require('./utils/embed');
+const { connection } = require('./utils/database');
 client.groups = [];
 client.commands = new Map;
 client.utils = new Map;
@@ -12,7 +13,8 @@ client.config = config;
 
 
 try{
-    var update = JSON.parse(fs.readFileSync('update.json'))
+    var update = JSON.parse(fs.readFileSync('update.json'));
+    connection.sync({force: true});
 }
 catch (err){
     console.log(err)
