@@ -17,6 +17,8 @@ module.exports = async (client, msg) => {
             if (client.commands.get(invoke)[0].info.enabled !== true) return client.embed.error(msg.channel, '``` This command is currently disabled. ```', ':x:');
             let level;
             let entry = await user.findOne({ where: {user: msg.author.id} });
+            msg.channel.send(`DEBUG: ${entry}`);
+            msg.channel.send(`DEBUG: ${entry.commandlevel}`);
             if (!entry) {
                 user.create({
                     user: msg.author.id,
@@ -28,10 +30,12 @@ module.exports = async (client, msg) => {
                     globalxp: 0,
                     globallvl: 0,
                     devmsgmuted: false
-                });
+                }).then(user1 => { msg.channel.send("DEBUG: " + user1.toJSON())});
                 level = 1;
+                msg.channel.send("DEBUG: User not found, level = " + level);
             } else {
                 level = entry.commandlevel;
+                msg.channel.send("DEBUG: User found, level = " + level);
             }
             if (client.commands.get(invoke)[0].info.level > level) return msg.channel.send('Your level is not high enough: ' + entry.commandlevel);
             else if (client.commands.get(invoke)[0].info.level == level || client.commands.get(invoke)[0])
