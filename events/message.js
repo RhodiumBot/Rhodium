@@ -27,9 +27,8 @@ module.exports = async (client, msg) => {
                     lastclaimed: 0,
                     globalxp: 0,
                     globallvl: 0,
-                    devmsgmuted: 0
-                }}).catch(err => err);
-                level = entry.level
+                    devmsgmuted: false
+                }}).spread((entry, created) => (level = entry.level)).catch(err => err);
             if (client.commands.get(invoke)[0].info.level > level) return msg.channel.send('Your level is not high enough: ' + entry.commandlevel);
             else if (client.commands.get(invoke)[0].info.level == level || client.commands.get(invoke)[0])
                 if(!client.commands.get(invoke)[0].info.permissions || msg.channel.memberPermissions(msg.member).has(client.commands.get(invoke)[0].info.permissions)){
