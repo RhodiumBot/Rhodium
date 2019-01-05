@@ -16,7 +16,7 @@ client.config = config;
 
 try{
     var update = JSON.parse(fs.readFileSync('update.json'));
-    connection.sync({force: true});
+    //connection.sync({force: true});
 }
 catch (err){
     console.log(err)
