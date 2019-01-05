@@ -1,3 +1,3 @@
 module.exports = async (client, debug) => {
-    console.log("DEBUG: ".red + debug)
+    if(process.argv.includes("debug")) console.log("[DEBUG] ".yellow + debug)
 }

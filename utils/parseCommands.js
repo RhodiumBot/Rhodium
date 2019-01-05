@@ -3,7 +3,7 @@ const cmdDir = fs.readdirSync('./commands/');
 var colors = require('colors');
 
 module.exports.run = (client) => {
-    console.log("Parsing commands".blue);
+    console.log("Parsing commands");
     client.commands = new Map;
     for (let dir of cmdDir) {
         console.log("- Loading group " + dir);

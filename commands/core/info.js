@@ -79,7 +79,7 @@ module.exports.run = async (msg, args, client) => {
     // Description
     `[Creator's homepage](https://rmcprod.me) | [Invite me](${await client.generateInvite(8)}) | [Support server](https://discord.gg/4GN58jw) | [GitHub Repo](https://github.com/Ron31/ron31apibot)`, 
 
-    contents, 0xffc600, {content: "Powered by Heinle IT Sys", icon: "https://scontent.fham1-1.fna.fbcdn.net/v/t1.0-9/41467921_684403271915381_4860305925547753472_n.jpg?_nc_cat=105&_nc_ht=scontent.fham1-1.fna&oh=b5a1d18bcb16655ce61caeb9bc6bc5d3&oe=5CA1A8F4"}, null, client.user.displayAvatarURL, null);
+    contents, 0xffc600, null, "https://cdn.discordapp.com/attachments/510821805108232199/531211239460831251/rect841.png", client.user.displayAvatarURL, null);
 
     // Get latency
     ping.promise.probe('discordapp.com').then(result => {

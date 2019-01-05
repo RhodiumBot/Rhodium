@@ -19,9 +19,9 @@ module.exports = async (client) => {
 
     client.utils.get("config-variables").run(client);
     console.log()
-    console.log(`----------------------------------------------`)
-    console.log(`Successfully logged in as ${client.user.tag}`);
-    console.log(`----------------------------------------------`)
+    console.log(`----------------------------------------------`.rainbow)
+    console.log(`Successfully logged in as ${client.user.tag}`.rainbow);
+    console.log(`----------------------------------------------`.rainbow)
     
     setInterval(() => {
         client.user.setPresence({status: "online", game: {name: presences[Math.round(Math.random() * presences.length-1)]}})
