@@ -17,8 +17,9 @@ module.exports = async (client, msg) => {
             if (client.commands.get(invoke)[0].info.enabled !== true) return client.embed.error(msg.channel, '``` This command is currently disabled. ```', ':x:');
             let level;
 
-            let entry = await user.findOne({where: {user: user.id}}).catch(err => console.log("[ERROR] ".red + err))
+            let entry = await user.findOne({ where: { user: user.id } });//.catch(err => console.log("[ERROR] ".red + err));
             console.log(entry);
+            if(client.DEBUG = true) { msg.channel.send("[DEBUG] Neuer account erstellt, Entry: " + entry + " Level: " + level) }
 
             if(!entry){
                 entry = await connection.query(`INSERT INTO users (user,commandlevel,credits,title,description,lastclaimed,globalxp,globallvl,devmsgmuted,createdAt,updatedAt) VALUES ('${msg.author.id}',1,500,'Random user','No description set.',0,0,0,false,now(), now());`).catch(err => console.log("[ERROR] ".red + err));
