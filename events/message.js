@@ -16,7 +16,19 @@ module.exports = async (client, msg) => {
         if (client.commands.has(invoke)) {
             if (client.commands.get(invoke)[0].info.enabled !== true) return client.embed.error(msg.channel, '``` This command is currently disabled. ```', ':x:');
             let level = 1;
-            let entry = await user.findOrCreate({where: {user: msg.author.id}, defaults:{
+
+            let entry = await user.findOne({where: {user: user.id}}).catch(err => console.log("[ERROR] ".red + err))
+            console.log(entry)
+
+            if(!entry){
+                entry = await connection.query(`INSERT INTO users (user,commandlevel,credits,title,description,lastclaimed,globalxp,globallvl,devmsgmuted,createdAt,updatedAt) VALUES ('${msg.author.id}',1,500,'Random user','No description set.',0,0,0,false,now(), now());`).catch(err => console.log("[ERROR] ".red + err))
+            }
+            console.log(entry)
+
+            entry = await user.findOne({where: {user: user.id}}).catch(err => console.log("[ERROR] ".red + err))
+            console.log(entry)
+
+            /*let entry = await user.findOrCreate({where: {user: msg.author.id}, defaults:{
                 user: msg.author.id,
                 commandlevel: 1,
                 credits: 500,
@@ -26,7 +38,7 @@ module.exports = async (client, msg) => {
                 globalxp: 0,
                 globallvl: 0,
                 devmsgmuted: false
-            }}).catch(err => {console.log("[ERROR] ".red + err)});
+            }}).catch(err => {console.log("[ERROR] [message.js] ".red + err)});*/
             level = entry.commandlevel
             if (client.commands.get(invoke)[0].info.level > level) return msg.channel.send('Your level is not high enough: ' + entry.commandlevel);
             else if (client.commands.get(invoke)[0].info.level == level || client.commands.get(invoke)[0])
