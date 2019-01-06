@@ -15,18 +15,20 @@ module.exports = async (client, msg) => {
         let args = msg.content.substr(prefix.length + invoke.length + 1).split(" ");
         if (client.commands.has(invoke)) {
             if (client.commands.get(invoke)[0].info.enabled !== true) return client.embed.error(msg.channel, '``` This command is currently disabled. ```', ':x:');
-            let level = 1;
+            let level;
 
             let entry = await user.findOne({where: {user: user.id}}).catch(err => console.log("[ERROR] ".red + err))
-            console.log(entry)
+            console.log(entry);
 
             if(!entry){
-                entry = await connection.query(`INSERT INTO users (user,commandlevel,credits,title,description,lastclaimed,globalxp,globallvl,devmsgmuted,createdAt,updatedAt) VALUES ('${msg.author.id}',1,500,'Random user','No description set.',0,0,0,false,now(), now());`).catch(err => console.log("[ERROR] ".red + err))
+                entry = await connection.query(`INSERT INTO users (user,commandlevel,credits,title,description,lastclaimed,globalxp,globallvl,devmsgmuted,createdAt,updatedAt) VALUES ('${msg.author.id}',1,500,'Random user','No description set.',0,0,0,false,now(), now());`).catch(err => console.log("[ERROR] ".red + err));
+                level = 1;
+                if(client.DEBUG = true) { msg.channel.send("[DEBUG] Neuer account erstellt, Entry: " + entry + " Level: " + level) }
+            } else {
+                level = entry.commandlevel;
+                if(client.DEBUG = true) { msg.channel.send("[DEBUG] -Alter Acc.- , Entry: " + entry + " Level: " + level) }
             }
-            console.log(entry)
-
-            entry = await user.findOne({where: {user: user.id}}).catch(err => console.log("[ERROR] ".red + err))
-            console.log(entry)
+            console.log(entry);
 
             /*let entry = await user.findOrCreate({where: {user: msg.author.id}, defaults:{
                 user: msg.author.id,
@@ -39,7 +41,6 @@ module.exports = async (client, msg) => {
                 globallvl: 0,
                 devmsgmuted: false
             }}).catch(err => {console.log("[ERROR] [message.js] ".red + err)});*/
-            level = entry.commandlevel
             if (client.commands.get(invoke)[0].info.level > level) return msg.channel.send('Your level is not high enough: ' + entry.commandlevel);
             else if (client.commands.get(invoke)[0].info.level == level || client.commands.get(invoke)[0])
                 if(!client.commands.get(invoke)[0].info.permissions || msg.channel.memberPermissions(msg.member).has(client.commands.get(invoke)[0].info.permissions)){
