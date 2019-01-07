@@ -18,7 +18,6 @@ module.exports = async (client, msg) => {
             let level;
 
             let entry = await user.findOne({ where: { user: msg.author.id}});
-            console.log(entry);
             //if(client.DEBUG = true) { msg.channel.send("[DEBUG] Neuer account erstellt, Entry: " + entry + " Level: " + level) }
 
             if(!entry){
@@ -29,7 +28,6 @@ module.exports = async (client, msg) => {
                 level = entry.commandlevel;
                 //if(client.DEBUG = true) { msg.channel.send("[DEBUG] -Alter Acc.- , Entry: " + entry + " Level: " + level) }
             }
-            console.log(entry);
 
             /*let entry = await user.findOrCreate({where: {user: msg.author.id}, defaults:{
                 user: msg.author.id,

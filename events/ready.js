@@ -13,7 +13,7 @@ module.exports = async (client) => {
                 .setTitle(`Update initiated by ${msg.author.tag}`)
                 .setDescription(`${client.vars.emojiIcons.check} Pulling changes from GitHub...
                 ${client.vars.emojiIcons.check} Restarting Process...`);
-            message.edit(emb)
+            message.edit("Update applied.", emb)
         })
 
         
