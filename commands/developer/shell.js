@@ -5,7 +5,7 @@ var cpcs, output ="";
 
 module.exports.run = async (msg, args, client) => {
     if(!cpcs){
-        cpcs = spawn('powershell')
+        cpcs = spawn('bash')
         console.log(`Shell started by ${msg.author.tag}`)
 
         cpcs.stdout.on('data', (data) => {

@@ -9,7 +9,11 @@ module.exports = async (client) => {
     if(client.update && client.update.applied == false){
         client.channels.get(client.update.channel).send(`Update applied. Running version ${config.version}`)
         client.channels.get(client.update.channel).fetchMessage(client.update.message).then(message => {
-            message.edit(`Update applied. Running version ${config.version}`)
+            let emb = new RichEmbed()
+                .setTitle(`Update initiated by ${msg.author.tag}`)
+                .setDescription(`${client.vars.emojiIcons.check} Pulling changes from GitHub...
+                ${client.vars.emojiIcons.check} Restarting Process...`);
+            message.edit(emb)
         })
 
         
