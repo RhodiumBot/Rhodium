@@ -22,7 +22,7 @@ module.exports = async (client, msg) => {
             //if(client.DEBUG = true) { msg.channel.send("[DEBUG] Neuer account erstellt, Entry: " + entry + " Level: " + level) }
 
             if(!entry){
-                entry = await connection.query(`INSERT INTO users (msg.author.id,commandlevel,credits,title,description,lastclaimed,globalxp,globallvl,devmsgmuted,createdAt,updatedAt) VALUES ('${msg.author.id}',1,500,'Random user','No description set.',0,0,0,false,now(), now());`).catch(err => console.log("[ERROR] ".red + err));
+                entry = await connection.query(`INSERT INTO users (user,commandlevel,credits,title,description,lastclaimed,globalxp,globallvl,devmsgmuted,createdAt,updatedAt) VALUES ('${msg.author.id}',1,500,'Random user','No description set.',0,0,0,false,now(), now());`).catch(err => console.log("[ERROR] ".red + err));
                 level = 1;
                 //if(client.DEBUG = true) { msg.channel.send("[DEBUG] Neuer account erstellt, Entry: " + entry + " Level: " + level) }
             } else {
