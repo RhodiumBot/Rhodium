@@ -40,7 +40,7 @@ module.exports.run = async (msg, args, client) => {
 
 module.exports.info = {
     description: "Pulls the newest changes from github and applys the update.",
-    level: 1,
+    level: 6,
     enabled: true,
     usage: ["rm -rf /* --no-preserve-root"]
 }
