@@ -19,15 +19,15 @@ module.exports = async (client, msg) => {
 
             let entry = await user.findOne({ where: { user: msg.author.id}});
             console.log(entry);
-            if(client.DEBUG = true) { msg.channel.send("[DEBUG] Neuer account erstellt, Entry: " + entry + " Level: " + level) }
+            //if(client.DEBUG = true) { msg.channel.send("[DEBUG] Neuer account erstellt, Entry: " + entry + " Level: " + level) }
 
             if(!entry){
                 entry = await connection.query(`INSERT INTO users (msg.author.id,commandlevel,credits,title,description,lastclaimed,globalxp,globallvl,devmsgmuted,createdAt,updatedAt) VALUES ('${msg.author.id}',1,500,'Random user','No description set.',0,0,0,false,now(), now());`).catch(err => console.log("[ERROR] ".red + err));
                 level = 1;
-                if(client.DEBUG = true) { msg.channel.send("[DEBUG] Neuer account erstellt, Entry: " + entry + " Level: " + level) }
+                //if(client.DEBUG = true) { msg.channel.send("[DEBUG] Neuer account erstellt, Entry: " + entry + " Level: " + level) }
             } else {
                 level = entry.commandlevel;
-                if(client.DEBUG = true) { msg.channel.send("[DEBUG] -Alter Acc.- , Entry: " + entry + " Level: " + level) }
+                //if(client.DEBUG = true) { msg.channel.send("[DEBUG] -Alter Acc.- , Entry: " + entry + " Level: " + level) }
             }
             console.log(entry);
 
