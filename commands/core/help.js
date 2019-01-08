@@ -24,7 +24,7 @@ module.exports.run = async (msg, args, client) => {
             let level = await user.findOne({ where: { user: msg.author.id}});
             //if(msg.channel.nsfw) categs.push("NSFW");
             //if(msg.member.hasPermission("ADMINISTRATOR")) categs.push("Admin");
-            //if(level.commandlevel >= 4) categs.push("Zekro Staff");
+            if(level.commandlevel >= 4) categs.push("ZekroStaff");
             if(level.commandlevel >= 5) categs.push("vServer");
             categs.forEach((category, cti) => {
                 listing[cti] = [category, " "];
