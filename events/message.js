@@ -16,25 +16,30 @@ module.exports = async (client, msg) => {
         if (client.commands.has(invoke)) {
             if (client.commands.get(invoke)[0].info.enabled !== true) return client.embed.error(msg.channel, '``` This command is currently disabled. ```', ':x:');
             let level;
-            let entry = await user.findOne({ where: {user: msg.author.id} });
-            if (!entry) {
-                user.create({
-                    user: msg.author.id,
-                    commandlevel: 1,
-                    credits: 500,
-                    title: 'Random user',
-                    description: 'No description set.',
-                    lastclaimed: 0,
-                    globalxp: 0,
-                    globallvl: 0,
-                    devmsgmuted: false
-                }).then(user1 => { msg.channel.send("DEBUG: " + user1.toJSON())}).catch(err => {console.log(err)});
+
+            let entry = await user.findOne({ where: { user: msg.author.id}});
+            //if(client.DEBUG = true) { msg.channel.send("[DEBUG] Neuer account erstellt, Entry: " + entry + " Level: " + level) }
+
+            if(!entry){
+                entry = await connection.query(`INSERT INTO users (user,commandlevel,credits,title,description,lastclaimed,globalxp,globallvl,devmsgmuted,createdAt,updatedAt) VALUES ('${msg.author.id}',1,500,'Random user','No description set.',0,0,0,false,now(), now());`).catch(err => console.log("[ERROR] ".red + err));
                 level = 1;
-                msg.channel.send("DEBUG: User not found, level = " + level);
+                //if(client.DEBUG = true) { msg.channel.send("[DEBUG] Neuer account erstellt, Entry: " + entry + " Level: " + level) }
             } else {
                 level = entry.commandlevel;
-                msg.channel.send("DEBUG: User found, level = " + level);
+                //if(client.DEBUG = true) { msg.channel.send("[DEBUG] -Alter Acc.- , Entry: " + entry + " Level: " + level) }
             }
+
+            /*let entry = await user.findOrCreate({where: {user: msg.author.id}, defaults:{
+                user: msg.author.id,
+                commandlevel: 1,
+                credits: 500,
+                title: 'Random user',
+                description: 'No description set.',
+                lastclaimed: 0,
+                globalxp: 0,
+                globallvl: 0,
+                devmsgmuted: false
+            }}).catch(err => {console.log("[ERROR] [message.js] ".red + err)});*/
             if (client.commands.get(invoke)[0].info.level > level) return msg.channel.send('Your level is not high enough: ' + entry.commandlevel);
             else if (client.commands.get(invoke)[0].info.level == level || client.commands.get(invoke)[0])
                 if(!client.commands.get(invoke)[0].info.permissions || msg.channel.memberPermissions(msg.member).has(client.commands.get(invoke)[0].info.permissions)){

@@ -12,9 +12,11 @@ client.utils = new Map;
 client.config = config;
 
 
+
+
 try{
     var update = JSON.parse(fs.readFileSync('update.json'));
-    connection.sync({force: true});
+    //connection.sync({force: true});
 }
 catch (err){
     console.log(err)
@@ -29,7 +31,7 @@ if(update && update.applied != true){
 
 
 // Parse Utils
-console.log("Parsing utils".blue);
+console.log("Parsing utils");
 for (let file of fs.readdirSync('./utils/')) {
     console.log("- Loading file " + file.split(".")[0]);
     if (!file.endsWith('.js')) return;
@@ -41,9 +43,5 @@ console.log("");
 client.utils.get("parseCommands").run(client);
 client.utils.get("parseEvents").run(client);
 
-let token = config.token
-if(process.argv[2]){
-    token = process.argv[2];
-}
 
-client.login(token);
+client.login(config.token);

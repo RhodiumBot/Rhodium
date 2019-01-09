@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 module.exports.run = client => {
-    console.log("Parsing events".blue)
+    console.log("Parsing events")
     fs.readdir("./events", (err, files) => {
         if (err) return console.error(err);
         files.forEach(file => {

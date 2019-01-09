@@ -32,6 +32,7 @@ module.exports.run = async client => {
             chevronright: client.emojis.get("529277168807575552"),
             close: client.emojis.get("529277168761700359"),
             check: client.emojis.get("529699429566119946"),
+            alert: client.emojis.get("531925571773399061"),
 
             animated: {
                 loading: client.emojis.get("510822371549249546"),

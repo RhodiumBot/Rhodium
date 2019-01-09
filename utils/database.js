@@ -14,7 +14,8 @@ let Users = database.define('users', {
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
-        primaryKey: true
+        primaryKey: true,
+        unique: true
     },
     user: {
         type: Sequelize.STRING(64),

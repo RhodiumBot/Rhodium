@@ -18,7 +18,7 @@ module.exports.run = async (msg, args, client) => {
             let update = {
                 applied: false,
                 channel: msg.channel.id,
-                message: msg.id
+                message: embmsg.id
             }
 
             fs.writeFileSync('update.json', JSON.stringify(update))

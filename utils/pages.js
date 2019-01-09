@@ -4,10 +4,16 @@ module.exports.run = async () => {
     console.log("This util has no run function")
 }
 
-module.exports.singleContent = async (msg, title, description, content, client) => {
+module.exports.singleContent = async (msg, title, description, contents, client) => {
     let page = 0;
-    if(content.match(/.{1000}/g)) content = content.match(/.{1000}/g);
-    else content = [content];
+    let content = []
+    if(contents.length > 1000){
+        for (let i=0; contents.length > 0; i++){
+            content.push(contents.substring(0, 1000))
+            contents = contents.substr(1000)
+        }
+    }
+    else content = [contents];
 
     let embed = new DJS.RichEmbed()
         .setTitle(title)
