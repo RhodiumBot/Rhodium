@@ -2,7 +2,7 @@ const octokit = require("@octokit/rest")();
 
 module.exports.run = async (msg, args, client) => {
     if(client.commands.has(args.join(" "))){
-        let cont = await octokit.repos.listContributors({owner: "Ron31", repo: "ron31apibot"})
+        let cont = await octokit.repos.listContributors({owner: "RhodiumBot", repo: "Rhodium"})
 
         let cmd = Function.prototype.toString.call(client.commands.get(args.join(" "))[0].run);
         cmd = cmd.replace(/`/g, "\\`")
@@ -16,7 +16,7 @@ module.exports.run = async (msg, args, client) => {
             ]],
             0x000000,
             null,
-            "", cont.data[0].avatar_url, "https://github.com/Ron31/ron31apibot/blob/master/commands/" + client.commands.get(args.join(" "))[1] + "/" + args.join(" ") + ".js",
+            "", cont.data[0].avatar_url, "https://github.com/RhodiumBot/Rhodium/blob/master/commands/" + client.commands.get(args.join(" "))[1] + "/" + args.join(" ") + ".js",
             (cmd.length > 1900 ? "This code is too long to be sent with Discord. Click on the GitHub link instead." : "```js\n"+cmd.substring(0,1900)+"```")
         )
     }
