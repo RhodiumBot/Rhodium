@@ -77,7 +77,7 @@ module.exports.run = async (msg, args, client) => {
 
     var embed = client.embed.uni(msg, "Info about " + client.user.username, 
     // Description
-    `[Creator's homepage](https://rmcprod.me) | [Invite me](${await client.generateInvite(8)}) | [Support server](https://discord.gg/4GN58jw) | [GitHub Repo](https://github.com/Ron31/ron31apibot)`, 
+    `[Creator's homepage](https://rmcprod.me) | [Invite me](${await client.generateInvite(8)}) | [Support server](https://discord.gg/aqHV7nu) | [GitHub Repo](https://github.com/RhodiumBot/Rhodium)`, 
 
     contents, 0xffc600, null, "https://cdn.discordapp.com/attachments/510821805108232199/531211239460831251/rect841.png", client.user.displayAvatarURL, null);
 
