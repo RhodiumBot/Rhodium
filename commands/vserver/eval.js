@@ -10,10 +10,9 @@ module.exports.run = async (msg, args, client) => {
         args.shift();
         msg.delete();
     }
-    befehl = args.join(' ');
-    console.log(befehl)
+    console.log(args.join(' '))
     try {
-        let ergebniss = await eval(befehl)
+        let evaled = await eval(args.join(' '))
         if(!silent)client.embed.success(msg.channel, '```' + ergebniss + '```', '<a:success:471096765613998080> Eval finished successfully.')
         else return;
         if (typeof ergebniss == "string" && ergebniss.includes(client.config.token)) {
