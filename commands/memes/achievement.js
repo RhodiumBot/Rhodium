@@ -1,5 +1,6 @@
 const Discord   = require('discord.js');
 const snekfetch = require('snekfetch');
+const Canvas = require('canvas');
 module.exports.run = async (msg, args, client) => {
     let picture;
     let text1;
