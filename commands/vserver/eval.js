@@ -12,8 +12,10 @@ module.exports.run = async (msg, args, client) => {
     }
     console.log(args.join(' '))
     try {
-        let evaled = await eval(args.join(' '))
-        evaled.replace(client.config.token, "<Censored Token>")
+        let evalargs = args.join(' ');
+        evalargs.replace("client.config.token", "<Censored Token>")
+        let evaled = await eval(evalargs)
+        
         if(!silent)client.embed.success(msg.channel, '```' + evaled + '```', '<a:success:471096765613998080> Eval finished successfully.')
         else return;
     } catch(e) {
