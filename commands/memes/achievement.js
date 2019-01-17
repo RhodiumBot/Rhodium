@@ -12,7 +12,7 @@ module.exports.run = async (msg, args, client) => {
         picture = "https://cdn.discordapp.com/emojis/495931857620434944.png?v1";
     }
     var Image = await Canvas.Image;
-        var canvas = await new Canvas(960, 173);
+        var canvas = await new Canvas.createCanvas(960, 173);
         var ctx = await canvas.getContext('2d');
 
         const achievementbg = new Image();
