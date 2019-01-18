@@ -10,7 +10,7 @@ However, the rewrite is still in progress so there's a lot of stuff missing righ
 **At this point of time, the bot features a few commands which are open to everyone:**
 * `>>emoji`: Sends the emoji with the given name. Useful as a nitro replacement.
 * `>>info`: This is most useful for people who like to look under the hood. It displays some information about the current status of the bot and it's machine, e.g. CPU/RAM usage, Latency, Version information but also dependencies of the script.
-* `>>say`: self explanatory.
+* `>>say`: self explanatory. [Level 3]
 * `>>profile`: Yes, we had that command in the old version - it generated a picture for everyone who used the command (which is a pretty cool feature not everyone has i think). Since we're in rewrite and just got the stuff with the database running, the profile is currently just an embed displaying your stats. But the images are definetely going to come back!
 
 
