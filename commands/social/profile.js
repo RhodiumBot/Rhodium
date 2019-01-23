@@ -39,7 +39,7 @@ module.exports.run = async (msg, args, client) => {
     const bg = new Image()
     bg.onload = () => ctx.drawImage(bg, 400, 300)
     bg.onerror = err => { throw err }
-    bg.src = '../../res/img/profile_bg.png'
+    bg.src = './res/img/profile_bg.png'
 
     //var grd=ctx.createLinearGradient(50,30,350,60);
     //grd.addColorStop(0,"rgba(0,0,20,0.9)");
