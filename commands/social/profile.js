@@ -31,7 +31,7 @@ module.exports.run = async (msg, args, client) => {
  
 
 
-/*
+
     var Image = Canvas.Image
     var canvas = Canvas.createCanvas(400, 300)
     var ctx = canvas.getContext('2d');
@@ -60,7 +60,7 @@ module.exports.run = async (msg, args, client) => {
     var finalimage=canvas.toBuffer()
     msg.channel.send(msg.author, {
         "file": finalimage // Or replace with FileOptions object
-    })*/
+    })
 }
 
 
