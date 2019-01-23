@@ -1,6 +1,6 @@
 const { user } = require("../../utils/database.js");
 const levels = [':zero:', ':one:', ':two:', ':three:', ':four:', ':five:', ':six:']
-//const Canvas = require("canvas");
+const Canvas = require("canvas");
 
 module.exports.run = async (msg, args, client) => {
     let userm;
