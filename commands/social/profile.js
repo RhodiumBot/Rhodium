@@ -60,8 +60,8 @@ module.exports.run = async (msg, args, client) => {
     var finalimage=canvas.toBuffer()
     msg.channel.send(msg.author, {
         "file": finalimage // Or replace with FileOptions object
-    })
-}*/
+    })*/
+}
 
 
 module.exports.info = {

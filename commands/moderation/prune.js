@@ -6,7 +6,7 @@ module.exports.run = async (msg, args, client) => {
         else {
             try{
                 await msg.channel.bulkDelete(parseInt(args[0]) + 1);
-                msg.channel.send(`:wastebasket: I deleted ${args[0]} messages from this channel.`).then(msg => {
+                msg.channel.send(`:wastebasket: Succesfully deleted ${args[0]} messages from this channel.`).then(msg => {
                     msg.delete(5000)
                 })
             }

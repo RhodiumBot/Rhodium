@@ -11,9 +11,11 @@ module.exports.run = (client) => {
         let group = fs.readdirSync(`./commands/${dir}`);
         for (let commandFile of group) {
             console.log("-- Loading command " + commandFile.split(".")[0] + " of " + dir)
-            if (!commandFile.endsWith('.js')) return;
-            let command = require(`../commands/${dir}/${commandFile}`);
-            client.commands.set(commandFile.split('.')[0], [command, dir]);
+                if (commandFile.endsWith('.js')){
+                let command = require(`../commands/${dir}/${commandFile}`);
+                client.commands.set(commandFile.split('.')[0], [command, dir]);
+            }
+            else console.log(`[WARN] Skipped loading of file ${ commandFile } - Not a .js file`.yellow)
         }
     }
     console.log("");
