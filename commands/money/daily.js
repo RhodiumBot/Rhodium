@@ -6,7 +6,7 @@ module.exports.run = async (msg, args, client) => {
     if(!entry) return msg.channel.send("Error! Please use >>devmsg for help.");
     if(entry.lastclaimed + 86400000 >= Date.now()) return msg.channel.send(`Next daily in: ${(entry.lastclaimed + 86400000 - Date.now())/ 60000} min`)
     let money = Math.round(Math.random() * 100);
-    await Users.update({ credits: entry.credits + 10, lastclaimed: Date.now() }, { where: { user: msg.author.id }});
+    await user.update({ credits: entry.credits + 10, lastclaimed: Date.now() }, { where: { user: msg.author.id }});
     msg.channel.send(`Your Daily Credits: ${money}`)
 };
 
