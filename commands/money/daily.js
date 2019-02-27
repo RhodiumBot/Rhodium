@@ -11,8 +11,8 @@ module.exports.run = async (msg, args, client) => {
 };
 
 exports.info = {
-    description: "Gives you a random amount of money [Testing]",
-    level: 6,
+    description: "Gives you a random amount of money",
+    level: 1,
     enabled: true,
     usage: [" "]
 };
