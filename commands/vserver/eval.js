@@ -1,4 +1,5 @@
 //const whitelist = require('../../config').eval_whitelist;
+const Discord = require("discord.js");
 
 module.exports.run = async (msg, args, client) => {
     /*if (!whitelist.includes(msg.author.id)) {

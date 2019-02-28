@@ -4,7 +4,7 @@ var colors = require('colors');
 
 module.exports.run = (client) => {
     console.log("Parsing commands");
-    client.commands = new Map;
+    client.commands = new Map();
     for (let dir of cmdDir) {
         console.log("- Loading group " + dir);
         client.groups.push(dir);
@@ -14,9 +14,15 @@ module.exports.run = (client) => {
                 if (commandFile.endsWith('.js')){
                 let command = require(`../commands/${dir}/${commandFile}`);
                 client.commands.set(commandFile.split('.')[0], [command, dir]);
+
+                if(command.info.alias){
+                    command.info.alias.forEach(alias => {
+                        client.commands.set(alias, [command, dir, true]);
+                    });
+                }
             }
             else console.log(`[WARN] Skipped loading of file ${ commandFile } - Not a .js file`.yellow)
         }
     }
     console.log("");
-}
+};

@@ -19,11 +19,11 @@ try{
     //connection.sync({force: true});
 }
 catch (err){
-    console.log(err)
+    console.log(err);
 }
 
 if(update && update.applied != true){
-    console.log('Finishing update...')
+    console.log('Finishing update...');
     client.update = update;
 }
 
