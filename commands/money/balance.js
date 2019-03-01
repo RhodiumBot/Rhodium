@@ -10,9 +10,9 @@ module.exports.run = async (msg, args, client) => {
 };
 
 exports.info = {
-    description: "Say you your money",
+    description: "Shows your accout balance.",
     level: 1,
     enabled: true,
-    usage: [" "],
+    usage: [" ", "@user"],
     alias: ["bal", "money"]
 };
