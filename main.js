@@ -7,24 +7,25 @@ var client = new Discord.Client();
 client.embed = require('./utils/embed');
 const { connection } = require('./utils/database');
 client.groups = [];
-client.commands = new Map;
-client.utils = new Map;
+client.commands = new Map();
+client.utils = new Map();
 client.config = config;
 
 
 
-
-try{
-    var update = JSON.parse(fs.readFileSync('update.json'));
-    //connection.sync({force: true});
-}
-catch (err){
-    console.log(err);
-}
-
-if(update && update.applied != true){
-    console.log('Finishing update...');
-    client.update = update;
+if(fs.existsSync('update.json')){
+    try{
+        var update = JSON.parse(fs.readFileSync('update.json'));
+        //connection.sync({force: true});
+    }
+    catch (err){
+        console.log(err);
+    }
+    if(update && update.applied != true){
+        console.log('Finishing update...');
+        client.update = update;
+    }
+    
 }
 
 

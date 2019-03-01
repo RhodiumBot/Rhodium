@@ -11,9 +11,7 @@ module.exports.run = async (msg, args, client) => {
     if(!entry) return msg.channel.send("Error! Please use >>devmsg for help.");
     entry.sort(compare);
     entry = entry.filter(u => client.users.has(u.dataValues.user));
-    entry.map((u, k) => console.log(u.dataValues.user, k));
-    //uni(msg, title, description, contents, color, footer, image, thumbnail, url, addition){
-    client.embed.uni(msg, "Credits leaderboard", entry.map((u, k) => (k < 5 ? `${k + 1}. ${client.users.get(u.dataValues.user).tag} (${u.dataValues.credits}C)` : ``)));
+    client.embed.uni(msg, "Credits leaderboard", entry.map((u, k) => (k < 5 ? `**${k + 1}.** **${client.users.get(u.dataValues.user).tag}** \`${u.dataValues.credits}C\`` : ``)));
 };
 
 exports.info = {
