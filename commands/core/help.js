@@ -21,7 +21,7 @@ module.exports.run = async (msg, args, client) => {
             };
 
             var listing=[];
-            var categs = ["Core", "Memes", "Social", "Developer", "Money"];
+            var categs = ["Core", "Memes", "Social", "Developer", "Money", "Music Producer"];
             let level = await user.findOne({ where: { user: msg.author.id}});
             if(msg.channel.nsfw) categs.push("NSFW");
             //if(msg.member.hasPermission("ADMINISTRATOR")) categs.push("Admin");
