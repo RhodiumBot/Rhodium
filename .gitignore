@@ -2,6 +2,7 @@
 config.json
 update.json
 tokens.txt
+.jshintrc
 
 # Logs
 logs

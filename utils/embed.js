@@ -30,9 +30,9 @@ module.exports = {
             .setDescription(cont)
 
         if(title){
-            emb.setTitle(title)
+            emb.setTitle(title);
         }
-        var sentmsg = chan.send('', emb)
+        var sentmsg = chan.send('', emb);
         return sentmsg
     },
 
@@ -41,9 +41,9 @@ module.exports = {
             .setDescription(description)
             .setTitle(title)
 
-        color && emb.setColor(color)
-        footer && emb.setFooter(footer, msg.author.displayAvatarURL)
-        thumbnail && emb.setThumbnail(thumbnail)
+        color && emb.setColor(color);
+        footer && emb.setFooter(footer, msg.author.displayAvatarURL);
+        thumbnail && emb.setThumbnail(thumbnail);
 
         contents.forEach(element => {
             emb.addField(element[0], element[1], true)
@@ -58,7 +58,7 @@ module.exports = {
     uni(msg, title, description, contents, color, footer, image, thumbnail, url, addition){
 
         let emb = new RichEmbed()
-            .setColor(color || "0xff0050")
+            .setColor(color || 0xFFC600)
             .setDescription(description || "No description set.")
 
             .setTitle(title || "No title set.")
