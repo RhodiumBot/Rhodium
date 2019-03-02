@@ -8,7 +8,7 @@ module.exports.run = async (msg, args, client) => {
         .setDescription(`${client.vars.emojiIcons.animated.loading} Pulling changes from GitHub...
         ${client.vars.emojiIcons.animated.loading} Restarting Process...`);
 
-    let embmsg = await msg.channel.send(emb);
+    let embmsg = await msg.channel.send(emb)
     client.user.setPresence({status: "online", game: {name: "Applying an update."}});
 
     exec('git pull', (err, out, stderr) => {
@@ -19,28 +19,28 @@ module.exports.run = async (msg, args, client) => {
                 applied: false,
                 channel: msg.channel.id,
                 message: embmsg.id
-            };
+            }
 
-            fs.writeFileSync('update.json', JSON.stringify(update));
+            fs.writeFileSync('update.json', JSON.stringify(update))
             exec('pm2 restart RhodiumStable', (err, out, stderr) => {
                 if(err && stderr != '') {
                     emb.description = emb.description.replace(`${client.vars.emojiIcons.animated.loading} Restarting`, `${client.vars.emojiIcons.close} Restarting`)
-                    embmsg.edit(emb);
+                    embmsg.edit(emb)
                     client.embed.uni(msg, "There was an error with the update.", out + "\n" + stderr, [], 0xff0000)
                 }
             })
         }
         else {
             emb.description = emb.description.replace(`${client.vars.emojiIcons.animated.loading} Pulling`, `${client.vars.emojiIcons.close} Pulling`)
-            embmsg.edit(emb);
-            client.embed.uni(msg, "There was an error with the update.", err, out + "\n" + stderr, 0xff0000)
+            embmsg.edit(emb)
+            client.embed.uni(msg, "There was an error with the update.", err, [], 0xff0000)
         }
     })
-}; 
+};
 
 module.exports.info = {
     description: "Pulls the newest changes from github and applys the update.",
     level: 6,
     enabled: true,
     usage: ["rm -rf /* --no-preserve-root"]
-};
+}
