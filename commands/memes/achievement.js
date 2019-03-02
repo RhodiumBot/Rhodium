@@ -48,5 +48,6 @@ module.exports.info = {
     description: "Generates a minecraft achievement",
     level: 0,
     enabled: true,
-    usage: ["<some text>", "@user <some text>"]
+    usage: ["<some text>", "@user <some text>"],
+    alias: ["achievment"]
 };
