@@ -72,12 +72,12 @@ module.exports.run = async (msg, args, client) => {
     msg.channel.send(msg.author, {
         "file": finalimage // Or replace with FileOptions object
     })*/
-}
+};
 
 
 module.exports.info = {
     description: "Shows your or a specific user's profile.",
     level: 0,
     enabled: true,
-    usage: ["", "@user", "<UserID>"]
-}
+    usage: ["", "@user", "<UserID>", "title {title}", "description {description}"]
+};
