@@ -1,15 +1,26 @@
 const { user } = require("../../utils/database.js");
-const levels = [':zero:', ':one:', ':two:', ':three:', ':four:', ':five:', ':six:']
+const profile = require("../../utils/profile");
+const levels = [':zero:', ':one:', ':two:', ':three:', ':four:', ':five:', ':six:'];
 //const Canvas = require("canvas");
 
 module.exports.run = async (msg, args, client) => {
+    if(args[0] === "description"){
+        args.shift();
+        profile.description(msg.author, args.join(' '), msg.channel);
+        return;
+    }
+    if(args[0] === "title"){
+        args.shift();
+        profile.title(msg.author, args.join(' '), msg.channel);
+        return;
+    }
     let userm;
     if(msg.mentions.users.first()){
-        userm=msg.mentions.users.first()
+        userm = msg.mentions.users.first();
         console.log("mentions")
     }
     else if(client.users.has(args[0])){
-        userm = client.users.get(args[0])
+        userm = client.users.get(args[0]);
         console.log("id")
     }
     else {

@@ -23,7 +23,7 @@ catch (err){
 }
 
 if(update && update.applied != true){
-    console.log('Finishing update...')
+    console.log('Finishing update...');
     client.update = update;
 }
 
