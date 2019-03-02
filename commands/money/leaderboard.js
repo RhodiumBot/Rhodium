@@ -11,11 +11,11 @@ module.exports.run = async (msg, args, client) => {
     if(!entry) return msg.channel.send("Error! Please use >>devmsg for help.");
     entry.sort(compare);
     entry = entry.filter(u => client.users.has(u.dataValues.user));
-    client.embed.uni(msg, "Credits leaderboard", entry.map((u, k) => (k < 5 ? `**${k + 1}.** **${client.users.get(u.dataValues.user).tag}** \`${u.dataValues.credits}C\`` : ``)));
+    client.embed.uni(msg, "Credits leaderboard", entry.map((u, k) => (k < 10 ? `**${k + 1}.** **${client.users.get(u.dataValues.user).tag}** \`${u.dataValues.credits}C\`` : ``)));
 };
 
 exports.info = {
-    description: "Gives you a random amount of money",
+    description: "Show the leaderboard",
     level: 1,
     enabled: true,
     usage: [" "],
