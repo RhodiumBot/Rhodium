@@ -12,7 +12,7 @@ module.exports.run = async (msg, args, client) => {
     client.user.setPresence({status: "online", game: {name: "Applying an update."}});
 
     exec('git pull', (err, out, stderr) => {
-        if(!err && stderr === ''){
+        if(!err && stderr == ''){
             emb.description = emb.description.replace(`${client.vars.emojiIcons.animated.loading} Pulling`, `${client.vars.emojiIcons.check} Pulling`)
             embmsg.edit(emb);
             let update = {
@@ -23,7 +23,7 @@ module.exports.run = async (msg, args, client) => {
 
             fs.writeFileSync('update.json', JSON.stringify(update));
             exec('pm2 restart RhodiumStable', (err, out, stderr) => {
-                if(err && stderr !== '') {
+                if(err && stderr != '') {
                     emb.description = emb.description.replace(`${client.vars.emojiIcons.animated.loading} Restarting`, `${client.vars.emojiIcons.close} Restarting`)
                     embmsg.edit(emb);
                     client.embed.uni(msg, "There was an error with the update.", out + "\n" + stderr, [], 0xff0000)
