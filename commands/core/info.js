@@ -1,16 +1,16 @@
 const ping = require("ping");
 const os = require("os");
 const fs = require("fs");
-const si = require("systeminformation")
+const si = require("systeminformation");
 
 module.exports.run = async (msg, args, client) => {
-    let uptime = new Date(client.uptime)
-    let created = client.user.createdAt
+    let uptime = new Date(client.uptime);
+    let created = client.user.createdAt;
     let dependencies = require("../../package.json");
     let deps = "";
     Object.entries(dependencies.dependencies).forEach(r => {
         deps += `${client.emojis.get("512713379593322535")} [${r[0]}](https://npmjs.org/package/${r[0]})${r[1]}\n`
-    })
+    });
     let contents = 
     [
         [
@@ -75,7 +75,7 @@ module.exports.run = async (msg, args, client) => {
         ]
     ];
 
-    var embed = client.embed.uni(msg, "Info about " + client.user.username, 
+    const embed = client.embed.uni(msg, "Info about " + client.user.username,
     // Description
     `[Creator's homepage](https://rmcprod.me) | [Invite me](${await client.generateInvite(8)}) | [Support server](https://discord.gg/aqHV7nu) | [GitHub Repo](https://github.com/RhodiumBot/Rhodium)`, 
 
@@ -91,12 +91,12 @@ module.exports.run = async (msg, args, client) => {
     });
 
     embed.message.then(mess => mess.edit(embed.emb))
-}
+};
 
 module.exports.info = {
     description: "Shows basic information about the bot.",
     level: 1,
     enabled: true
-}
+};
 
 // ${client.emojis.get("511137774162804736")} Latency:

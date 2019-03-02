@@ -14,16 +14,16 @@ module.exports = async (client) => {
                 .setTitle(`Update initiated by ${message.author.tag}`)
                 .setDescription(`${client.vars.emojiIcons.check} Pulling changes from GitHub...
                 ${client.vars.emojiIcons.check} Restarting Process...`);
-            message.edit("Update applied.", emb)
+            message.edit("Update applied.", emb);
         });
 
         
-        client.update.applied = true
+        client.update.applied = true;
         fs.writeFileSync('update.json', JSON.stringify(client.update))
     }
 
     client.utils.get("config-variables").run(client);
-    console.log()
+    console.log();
     console.log(`----------------------------------------------`.rainbow);
     console.log(`Successfully logged in as ${client.user.tag}`.rainbow);
     console.log(`----------------------------------------------`.rainbow);

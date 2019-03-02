@@ -10,9 +10,9 @@ module.exports.run = async (msg, args, client) => {
         text1 = await args.join(" ");
         picture = "https://cdn.discordapp.com/emojis/495931857620434944.png?v1";
     }
-    var Image = await Canvas.Image;
-        var canvas = await new Canvas.Canvas(960, 173);
-        var ctx = await canvas.getContext('2d');
+        let Image = await Canvas.Image;
+        let canvas = await new Canvas.Canvas(960, 173);
+        let ctx = await canvas.getContext('2d');
 
         const achievementbg = new Image();
         achievementbg.onload = () => ctx.drawImage(achievementbg, 0, 0);
@@ -37,7 +37,7 @@ module.exports.run = async (msg, args, client) => {
 
         imgg.src = avatarbuffer;
 
-        var finalimage= await canvas.toBuffer();
+        let finalimage= await canvas.toBuffer();
 
         msg.channel.send("", {
         "file": Buffer.from(finalimage)

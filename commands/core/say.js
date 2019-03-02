@@ -1,6 +1,6 @@
 module.exports.run = async (msg, args, client) => {
         msg.channel.send(args.join(' '));
-        msg.delete()
+        msg.delete();
 };
 
 module.exports.info = {

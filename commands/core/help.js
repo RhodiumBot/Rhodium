@@ -7,7 +7,7 @@ module.exports.run = async (msg, args, client) => {
                 client.commands.get(args[0])[0].info.usage && contents.push(["Usage", "```"+client.commands.get(args[0])[0].info.usage.map(a => `${msg.prefix}${args[0]} ${a}`).join("\n")+"```", false]);
                 client.commands.get(args[0])[0].info.alias && contents.push(["Aliases", "```"+client.commands.get(args[0])[0].info.alias.map(a => `${msg.prefix}${a}`).join("\n")+"```", false]);
                 //uni(msg, title, description, contents, color, footer, image, thumbnail, url){
-                client.embed.uni(msg, `Info about ${msg.prefix + args[0]}`, client.commands.get(args[0])[0].info.description, contents)
+                client.embed.uni(msg, `Info about ${msg.prefix + args[0]}`, client.commands.get(args[0])[0].info.description, contents);
             }
             else{
                 msg.channel.send(msg.author +", that command doesn't exist!");
@@ -30,12 +30,12 @@ module.exports.run = async (msg, args, client) => {
             categs.forEach((category, cti) => {
                 listing[cti] = [category, " "];
                 commandlist.values.forEach((k, i) => {
-                    if(k[1] == category.toLowerCase() && k[0].info.enabled && !k[2]) listing[cti][1]+="`"+commandlist.keys[i]+"`, "; //+k[1]+"\n"
+                    if(k[1] === category.toLowerCase() && k[0].info.enabled && !k[2]) listing[cti][1]+="`"+commandlist.keys[i]+"`, "; //+k[1]+"\n"
                 });
-                if(listing[cti][1]==" ") listing[cti][1]="No commands listed in this category.";
+                if(listing[cti][1]===" ") listing[cti][1]="No commands listed in this category.";
                 else listing[cti][1] = listing[cti][1].substr(0, listing[cti][1].length - 2);
             });
-            client.embed.help(msg, "List of available commands", `For further information about a command, type \`${msg.prefix}help <command>\``, listing, "0x36393f", "Help", client.user.displayAvatarURL)
+            client.embed.help(msg, "List of available commands", `For further information about a command, type \`${msg.prefix}help <command>\``, listing, "0x36393f", "Help", client.user.displayAvatarURL);
         }
     };
 

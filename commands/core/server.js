@@ -1,7 +1,7 @@
 const { user } = require('../../utils/database');
 
 module.exports.run = async (msg, args, client) => {
-    msg.delete()
+    msg.delete();
     
     let contents = 
     [
@@ -12,9 +12,9 @@ module.exports.run = async (msg, args, client) => {
             true
         ],
         [
-            `Channels (${msg.guild.channels.filter(c => c.type!="category").size})`,
-            `${client.vars.emojiIcons.text} ${msg.guild.channels.filter(c => c.type=="text").size}
-            ${client.vars.emojiIcons.voice} ${msg.guild.channels.filter(c => c.type=="voice").size}`,
+            `Channels (${msg.guild.channels.filter(c => c.type!=="category").size})`,
+            `${client.vars.emojiIcons.text} ${msg.guild.channels.filter(c => c.type==="text").size}
+            ${client.vars.emojiIcons.voice} ${msg.guild.channels.filter(c => c.type==="voice").size}`,
             true
         ],,
         [
@@ -37,7 +37,7 @@ module.exports.run = async (msg, args, client) => {
         ]
     ];
 
-    client.embed.uni(msg, `${msg.guild.name} *(${msg.guild.id})*`, ``, contents, msg.guild.owner.highestRole.hexColor, {content: msg.guild.region, icon: client.vars.emojiIcons.earth.url}, null, msg.guild.iconURL)
+    client.embed.uni(msg, `${msg.guild.name} *(${msg.guild.id})*`, ``, contents, msg.guild.owner.highestRole.hexColor, {content: msg.guild.region, icon: client.vars.emojiIcons.earth.url}, null, msg.guild.iconURL);
 };
 
 exports.info = {
