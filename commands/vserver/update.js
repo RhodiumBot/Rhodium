@@ -13,6 +13,7 @@ module.exports.run = async (msg, args, client) => {
 
     exec('git pull', (err, out, stderr) => {
         if(!err && stderr == ''){
+            console.log(out);
             emb.description = emb.description.replace(`${client.vars.emojiIcons.animated.loading} Pulling`, `${client.vars.emojiIcons.check} Pulling`)
             embmsg.edit(emb);
             let update = {
