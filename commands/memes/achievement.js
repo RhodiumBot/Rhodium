@@ -17,7 +17,7 @@ module.exports.run = async (msg, args, client) => {
         const achievementbg = new Image();
         achievementbg.onload = () => ctx.drawImage(achievementbg, 0, 0);
         achievementbg.onerror = err => { throw err };
-        achievementbg.src = "../../res/img/achievementget.png";
+        achievementbg.src = "./../../res/img/achievementget.png";
 
         ctx.fillStyle = "#212121";
         ctx.fillRect(30,30,900,130);
