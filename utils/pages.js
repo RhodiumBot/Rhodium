@@ -28,7 +28,7 @@ module.exports.singleContent = async (msg, title, description, contents, client)
             await reactor.react(client.vars.emojiIcons.close);
             await reactor.react(client.vars.emojiIcons.chevronright);
             client.on('messageReactionAdd', async (reaction, user) => {
-                if (reaction.message.id === reactor.id && user.id === msg.author.id && reaction.count == 2) {
+                if (reaction.message.id === reactor.id && user.id === msg.author.id && reaction.count === 2) {
                     if (reaction.emoji == client.vars.emojiIcons.chevronleft) page--;
                     else if (reaction.emoji == client.vars.emojiIcons.chevronright) page++;
                     else if (reaction.emoji == client.vars.emojiIcons.close) {
@@ -58,7 +58,7 @@ module.exports.multiContent = async (msg, content, client) => {
             await reactor.react(client.vars.emojiIcons.chevronright);
             client.on('messageReactionAdd', async (reaction, user) => {
                 if (reaction.message.id === reactor.id && user.id === msg.author.id) {
-                    if (reaction.emoji == client.vars.emojiIcons.chevronleft) page--;
+                    if (reaction.emoji === client.vars.emojiIcons.chevronleft) page--;
                     else if (reaction.emoji == client.vars.emojiIcons.chevronright) page++;
                     else if (reaction.emoji == client.vars.emojiIcons.close) {
                         reactor.clearReactions();
