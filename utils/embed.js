@@ -1,4 +1,4 @@
-const { RichEmbed } = require('discord.js')
+const { RichEmbed } = require('discord.js');
 
 const COLORS = {
     red:    0xE81123,
