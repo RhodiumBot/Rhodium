@@ -24,7 +24,7 @@ module.exports.run = async (msg, args, client) => {
         client.utils.get("pages").multiContent(msg, contents, client);
     }
     else {
-        client.utils.get("pages").singleContent(msg, "List of all channels", `${client.vars.emojiIcons.text} Total Channel Count: ${msg.guild.channels.size}\nFor a detailed list, type ${msg.prefix}channels -l`, msg.guild.channels.filter((c) => c.type !== "category").sort(compare).map((g) => `${(g.type === "text" ? `(T)` : `(V)`)}\t${g.name} *(${g.id})*`).join("\n"), client)
+        client.utils.get("pages").singleContent(msg, "List of all channels", `${client.vars.emojiIcons.text} Total Channel Count: ${msg.guild.channels.size}\nFor a detailed list, type ${msg.prefix}channels -l`, msg.guild.channels.filter((c) => c.type !== "category").sort(compare).map((g) => `${(g.type === "text" ? "(T)" : "(V)")}\t${g.name} *(${g.id})*`).join("\n"), client);
     }
 
 };
