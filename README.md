@@ -1,3 +1,6 @@
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/55e720afab064476af5be8ed12def218)](https://app.codacy.com/app/RhodiumBot/Rhodium?utm_source=github.com&utm_medium=referral&utm_content=RhodiumBot/Rhodium&utm_campaign=Badge_Grade_Settings)
+
 **Rhodium**
 
 Hey There! We're just two hobby developers working together on this little bot.
