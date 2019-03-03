@@ -1,4 +1,4 @@
-const database = require('./database.js');
+const database = require("./database.js");
 
 class Profile {
 
@@ -12,11 +12,11 @@ class Profile {
      */
 
     static async description(user, desc, channel) {
-        if (!user || !desc) return channel.send('Please provide a description.');
+        if (!user || !desc) { return channel.send("Please provide a description."); }
 
         await database.user.update({description: desc}, { where: {user: user.id}});
-        channel.send('Description updatet!');
-    };
+        channel.send("Description updatet!");
+    }
 
     /**
      * Setze den Title
@@ -28,10 +28,10 @@ class Profile {
      */
 
     static async title(user, title, channel) {
-        if (!user || !title) return channel.send('Please provide a title.');
+        if (!user || !title) { return channel.send("Please provide a title"); }
 
         await database.user.update({title: title}, { where: {user: user.id}});
-        channel.send('Title updatet!');
+        channel.send("Title updatet!");
     }
 }
 
