@@ -28,7 +28,7 @@ module.exports.run = async (msg, args, client) => {
         client.utils.get("pages").singleContent(msg, "List of all roles", `${client.vars.emojiIcons.at} Total Role Count: ${msg.guild.roles.size}\nFor a detailed list, type ${msg.prefix}roles -l`, msg.guild.roles.sort(compare).map((g) => `(${g.members.size})\t` + g.name).join(",\n"), client);
     }
 
-}
+};
 
 
 module.exports.info = {
