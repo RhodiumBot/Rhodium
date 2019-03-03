@@ -32,7 +32,7 @@ class Profile {
 
         await database.user.update({title: title}, { where: {user: user.id}});
         channel.send('Title updatet!');
-    };
+    }
 }
 
 module.exports = Profile;
