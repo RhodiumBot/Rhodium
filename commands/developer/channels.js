@@ -17,7 +17,7 @@ module.exports.run = async (msg, args, client) => {
                 .setDescription(`${channel.type === "voice" ? `${client.vars.emojiIcons.voice} Voice` : `${client.vars.emojiIcons.text} Text`}\n${channel.nsfw ? `${client.vars.emojiIcons.alert} NSFW` : ""}`)
                 .setFooter(`Page ${index+1}/${msg.guild.channels.filter((c) => c.type !== "category").size}`)
                 .setTimestamp(channel.createdTimestamp)
-                .setColor(0xffc600);
+                .setColor("#ffc600");
             contents.push(guildInfo);
         });
 
