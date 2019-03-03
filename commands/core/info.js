@@ -8,68 +8,68 @@ module.exports.run = async (msg, args, client) => {
     let created = client.user.createdAt;
     let dependencies = require("../../package.json");
     let deps = "";
-    Object.entries(dependencies.dependencies).forEach(r => {
-        deps += `${client.emojis.get("512713379593322535")} [${r[0]}](https://npmjs.org/package/${r[0]})${r[1]}\n`
+    Object.entries(dependencies.dependencies).forEach((r) => {
+        deps += `${client.emojis.get("512713379593322535")} [${r[0]}](https://npmjs.org/package/${r[0]})${r[1]}\n`;
     });
     let contents = 
     [
         [
-            `Client`,
+            "Client",
             `${client.vars.emojiIcons.animation} ${client.user.tag}`,
             true
         ],
         [
-            `Version`,
+            "Version",
             `${client.vars.emojiIcons.animation} ${client.config.version}`,
             true
         ],
         [
-            `Interface`,
+            "Interface",
             `${client.vars.emojiIcons.containstart} \`${client.config.prefix}\` (global)
-            ${(client.config.prefix!=msg.prefix ? `${client.vars.emojiIcons.containstart} \`${msg.prefix}\` (local)` : "")}`,
+            ${(client.config.prefix !== msg.prefix ? `${client.vars.emojiIcons.containstart} \`${msg.prefix}\` (local)` : "")}`,
             true
         ],
         [
-            `Created at`,
+            "Created at",
             `${client.vars.emojiIcons.calendar} ${created.getDate()}.${created.getMonth()}.${created.getFullYear()}`,
             true
         ],
         [
-            `Latency`,
+            "Latency",
             `${client.vars.emojiIcons.animated.accesspointnetwork} -> discordapp.com: Pending...
             ${client.vars.emojiIcons.animated.accesspointnetwork} -> Discord API: Pending...`,
             true
         ],
         [
-            `Guilds`,
+            "Guilds",
             `${client.vars.emojiIcons.servernetwork} ${client.guilds.size}
             ${client.vars.emojiIcons.accountmultiple} ${client.users.size}`,
             true
         ],
         [
-            `NodeJS Version`,
+            "NodeJS Version",
             `${client.vars.emojiIcons.nodejs} ${process.version}`,
             true
         ],
         [
-            `Uptime`,
+            "Uptime",
             `${client.vars.emojiIcons.history} ${uptime.getDate()-1}d ${uptime.getHours()-1}h ${uptime.getMinutes()}m ${uptime.getSeconds()}s`,
             true
         ],
         [
-            `RAM`,
+            "RAM",
             `${client.vars.emojiIcons.memory} ${((os.totalmem() - os.freemem()) / 1.074e+9).toFixed(2)}GiB / ${(os.totalmem() / 1.074e+9).toFixed(2)}GiB`,
             true
         ],
         [
-            `CPU`,
+            "CPU",
             `${client.vars.emojiIcons.chip} ${os.cpus()[0].model.split("@")[0]}
             ${client.vars.emojiIcons.gauge} ${Object.keys(os.cpus()).length}x${(os.cpus()[0].speed / 1000).toFixed(2)}GHz
             ${client.vars.emojiIcons.percent} ${Math.round((await si.currentLoad()).currentload)}%`,
             true
         ],
         [
-            `Dependencies`,
+            "Dependencies",
             deps,
             true
         ]
@@ -82,15 +82,15 @@ module.exports.run = async (msg, args, client) => {
     contents, 0xffc600, null, "https://cdn.discordapp.com/attachments/510821805108232199/531211239460831251/rect841.png", client.user.displayAvatarURL, null);
 
     // Get latency
-    ping.promise.probe('discordapp.com').then(result => {
+    ping.promise.probe("discordapp.com").then((result) => {
         contents[4][1]=`${client.vars.emojiIcons.accesspointnetwork} -> discordapp.com: ${result.time}ms\n${client.vars.emojiIcons.accesspointnetwork} -> Discord API: ${Math.round(client.ping)}ms`
         embed.emb.fields = [];
-        contents.forEach(element => {
-            embed.emb.addField(element[0], element[1], element[2])
+        contents.forEach((element) => {
+            embed.emb.addField(element[0], element[1], element[2]);
         });
     });
 
-    embed.message.then(mess => mess.edit(embed.emb))
+    embed.message.then((mess) => mess.edit(embed.emb));
 };
 
 module.exports.info = {

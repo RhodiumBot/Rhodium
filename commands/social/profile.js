@@ -1,27 +1,27 @@
 const { user } = require("../../utils/database.js");
 const profile = require("../../utils/profile");
-const levels = [':zero:', ':one:', ':two:', ':three:', ':four:', ':five:', ':six:'];
+const levels = [":zero:", ":one:", ":two:", ":three:", ":four:", ":five:", ":six:"];
 //const Canvas = require("canvas");
 
 module.exports.run = async (msg, args, client) => {
     if(args[0] === "description"){
         args.shift();
-        profile.description(msg.author, args.join(' '), msg.channel);
+        profile.description(msg.author, args.join(" "), msg.channel);
         return;
     }
     if(args[0] === "title"){
         args.shift();
-        profile.title(msg.author, args.join(' '), msg.channel);
+        profile.title(msg.author, args.join(" "), msg.channel);
         return;
     }
     let userm;
     if(msg.mentions.users.first()){
         userm = msg.mentions.users.first();
-        console.log("mentions")
+        console.log("mentions");
     }
     else if(client.users.has(args[0])){
         userm = client.users.get(args[0]);
-        console.log("id")
+        console.log("id");
     }
     else {
         userm = msg.author;
@@ -30,15 +30,15 @@ module.exports.run = async (msg, args, client) => {
             user: userm.id, // MAKE THIS AN UNIQUE KEY
             commandlevel: 1,
             credits: 500,
-            title: 'Random user',
-            description: 'No description set.',
+            title: "Random user",
+            description: "No description set.",
             lastclaimed: 0,
             globalxp: 0,
             globallvl: 0,
             devmsgmuted: false
         }}).catch(err => console.log(err));
     entry = await user.findOne({ where: { user: userm.id }}).catch(err => console.log("[ERROR] ".red + err));
-    client.embed.success(msg.channel, '**' + entry.title + '\n\n*' + entry.description + '*\n\n**Credits: ' + entry.credits + '\nGlobal XP: ' + entry.globalxp +' \nGlobal Level: ' + entry.globallvl +'\nYour command execution level: ' + levels[entry.commandlevel] + (entry.devmsgmuted ? "\n\n**WARNING:** You're muted for sending dev messages." : "") + (entry.commandlevel == 0 ? "\n\n**WARNING:** Your command level is :zero: ." : ""), (entry.user == "301613319998013440" ? "<a:doggo:470915769950011393> " : "") + 'User profile for ' + userm.username + ` ${(client.users.get(entry.user).bot ? client.emojis.get("510822364330852362") : "")} (ID: ${entry.id})`)
+    client.embed.success(msg.channel, "**" + entry.title + "\n\n*" + entry.description + "*\n\n**Credits: " + entry.credits + "\nGlobal XP: " + entry.globalxp + "\nGlobal Level: " + entry.globallvl + "\nYour command execution level: " + levels[entry.commandlevel] + (entry.devmsgmuted ? "\n\n**WARNING:** You're muted for sending dev messages." : "") + (entry.commandlevel == 0 ? "\n\n**WARNING:** Your command level is :zero: ." : ""), (entry.user === "301613319998013440" ? "<a:doggo:470915769950011393> " : "") + "User profile for " + userm.username + ` ${(client.users.get(entry.user).bot ? client.emojis.get("510822364330852362") : "")} (ID: ${entry.id})`);
  
 
 
