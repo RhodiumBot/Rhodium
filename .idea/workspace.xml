@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f76a449-37ec-4848-81da-f330d32c88b3" name="Default Changelist" comment="" />
+    <list default="true" id="5894a784-8220-44c9-a0d0-34d4c3c190be" name="Default Changelist" comment="Changing Part">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -25,86 +30,28 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Mio@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="Rhodium" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Mio@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="Rhodium" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Mio@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="Rhodium" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="mio: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="c10_Mio: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Mio@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="Rhodium" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="mio: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="badges: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Mio@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="mio: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="users: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="c10_Mio: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="users: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-456010381">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="9" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.29" value="1" />
-          <entry key="project.open.time.31" value="1" />
-          <entry key="project.open.time.33" value="1" />
-          <entry key="project.open.time.34" value="1" />
-          <entry key="project.open.time.36" value="1" />
-          <entry key="project.open.time.49" value="1" />
-          <entry key="project.open.time.58" value="1" />
-          <entry key="project.open.time.76" value="1" />
-          <entry key="project.opened" value="10" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="gitignore" value="2" />
-          <entry key="js" value="62" />
-          <entry key="sql" value="1" />
-          <entry key="users" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Database Element" value="3" />
-          <entry key="JavaScript" value="62" />
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Scratch" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="cell" value="1" />
-          <entry key="gitignore" value="22" />
-          <entry key="js" value="3695" />
-          <entry key="txt" value="28" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JavaScript" value="3695" />
-          <entry key="PLAIN_TEXT" value="50" />
-          <entry key="Scratch" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="Mio" />
@@ -112,7 +59,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="das://eb535604-fe7d-40e2-84f0-78bb20936428/schema/mio/table/users">
+        <entry file="das://12c8f6be-14e0-4815-a9a3-d84bfcf642e3/schema/c10_Mio/table/users">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -121,37 +68,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/commands/core/achievement.js">
+        <entry file="file://$PROJECT_DIR$/commands/vserver/update.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="12" selection-start-line="12" selection-end-line="13" />
+            <state relative-caret-position="320">
+              <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/commands/core/triggered.js">
+        <entry file="file://$PROJECT_DIR$/commands/memes/achievement.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+            <state relative-caret-position="320">
+              <caret line="52" column="2" lean-forward="true" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/commands/core/sql.js">
+        <entry file="file://$PROJECT_DIR$/commands/money/leaderboard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/commands/core/eval.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="323">
+              <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -161,58 +99,55 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="NodeJS" />
         <option value="JavaScript File" />
+        <option value="NodeJS" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="websocket" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test.js" />
+        <option value="$PROJECT_DIR$/commands/developer/eval.js" />
         <option value="$PROJECT_DIR$/utils/database.js" />
-        <option value="$PROJECT_DIR$/commands/core/say1.js" />
-        <option value="$PROJECT_DIR$/commands/core/say2.js" />
-        <option value="$PROJECT_DIR$/commands/core/say3.js" />
-        <option value="$PROJECT_DIR$/commands/core/say4.js" />
-        <option value="$PROJECT_DIR$/commands/core/say5.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/embed.js" />
-        <option value="$PROJECT_DIR$/mio.js" />
-        <option value="$PROJECT_DIR$/commands/zekro staff/kill.js" />
-        <option value="$PROJECT_DIR$/commands/core/say.js" />
-        <option value="$PROJECT_DIR$/commands/developer/level.js" />
-        <option value="$PROJECT_DIR$/commands/core/help.js" />
-        <option value="$PROJECT_DIR$/commands/core/emote.js" />
+        <option value="$PROJECT_DIR$/commands/developer/debug.js" />
         <option value="$PROJECT_DIR$/events/message.js" />
-        <option value="$PROJECT_DIR$/commands/core/sql.js" />
-        <option value="$PROJECT_DIR$/commands/core/eval.js" />
+        <option value="$PROJECT_DIR$/commands/developer/update.js" />
+        <option value="$PROJECT_DIR$/commands/money/daily.js" />
+        <option value="$PROJECT_DIR$/commands/money/money.js" />
+        <option value="$PROJECT_DIR$/config.json" />
+        <option value="$PROJECT_DIR$/utils/profile.js" />
+        <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/commands/social/profile.js" />
+        <option value="$PROJECT_DIR$/utils/parseCommands.js" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/commands/money/leaderboard.js" />
+        <option value="$PROJECT_DIR$/commands/memes/achievement.js.disabled" />
         <option value="$PROJECT_DIR$/events/ready.js" />
-        <option value="$PROJECT_DIR$/commands/core/achievement.js" />
-        <option value="$PROJECT_DIR$/commands/core/triggered.js" />
+        <option value="$PROJECT_DIR$/commands/core/devmsg.js" />
+        <option value="$PROJECT_DIR$/commands/core/emoji.js" />
+        <option value="$PROJECT_DIR$/commands/core/help.js" />
+        <option value="$PROJECT_DIR$/commands/core/info.js" />
+        <option value="$PROJECT_DIR$/commands/core/invite.js" />
+        <option value="$PROJECT_DIR$/commands/core/say.js" />
+        <option value="$PROJECT_DIR$/commands/core/server.js" />
+        <option value="$PROJECT_DIR$/commands/developer/channels.js" />
+        <option value="$PROJECT_DIR$/commands/vserver/update.js" />
+        <option value="$PROJECT_DIR$/commands/memes/achievement.js" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/package.json" />
-    </packageJsonPaths>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="5" />
+    <option name="y" value="-16" />
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
@@ -222,60 +157,80 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Mio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mio" type="462c0819:PsiDirectoryNode" />
+              <item name="Rhodium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rhodium" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Mio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mio" type="462c0819:PsiDirectoryNode" />
+              <item name="Rhodium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rhodium" type="462c0819:PsiDirectoryNode" />
               <item name="commands" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Mio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mio" type="462c0819:PsiDirectoryNode" />
+              <item name="Rhodium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rhodium" type="462c0819:PsiDirectoryNode" />
               <item name="commands" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Mio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mio" type="462c0819:PsiDirectoryNode" />
+              <item name="Rhodium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rhodium" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+              <item name="developer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rhodium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rhodium" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+              <item name="memes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rhodium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rhodium" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+              <item name="money" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rhodium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rhodium" type="462c0819:PsiDirectoryNode" />
               <item name="events" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Mio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Rhodium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rhodium" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rhodium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rhodium" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rhodium" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rhodium" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="javascript.karma.karma_node_package_dir" value="" />
-    <property name="javascript.nodejs.core.library.configured.version" value="10.5.0" />
-    <property name="js.buildTools.grunt.grunt-cli.package" value="" />
-    <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../org.discordlist.api" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Malte\WebstormProjects\Mio\commands\core" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Malte\WebstormProjects\Mio\commands\core" />
+      <recent name="C:\Users\Malte\WebstormProjects\Rhodium\commands\money" />
+      <recent name="C:\Users\Malte\WebstormProjects\Rhodium\commands\developer" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -290,27 +245,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="js.build_tools.grunt" factoryName="Grunt.js">
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="Node!!!" type="js.build_tools.npm" factoryName="npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3f76a449-37ec-4848-81da-f330d32c88b3" name="Default Changelist" comment="" />
+      <changelist id="5894a784-8220-44c9-a0d0-34d4c3c190be" name="Default Changelist" comment="Forcing Database" />
       <created>1538559708358</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -326,46 +266,288 @@
       <workItem from="1538981571608" duration="4363000" />
       <workItem from="1538995558324" duration="1357000" />
       <workItem from="1539007149045" duration="1822000" />
+      <workItem from="1546600723153" duration="462000" />
+      <workItem from="1546615392228" duration="546000" />
+      <workItem from="1546615983487" duration="4833000" />
+      <workItem from="1546790797459" duration="2245000" />
+      <workItem from="1550501342929" duration="3167000" />
+      <workItem from="1551034819421" duration="306000" />
+      <workItem from="1551378303898" duration="2354000" />
+      <workItem from="1551524060982" duration="385000" />
+      <workItem from="1551524753147" duration="42000" />
+      <workItem from="1551524847685" duration="461000" />
+      <workItem from="1551525380446" duration="12010000" />
     </task>
-    <task id="LOCAL-00001" summary="Changelost">
-      <created>1538635405629</created>
+    <task id="LOCAL-00001" summary="hey, what's that over there?!">
+      <created>1546616160726</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1538638473217</updated>
-      <workItem from="1538635406392" duration="1173000" />
+      <updated>1546616160726</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
-    <option name="trackContextForNewChangelist" value="true" />
+    <task id="LOCAL-00002" summary="Working on tests (haha)">
+      <created>1546616515661</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1546616515661</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Working on tests (haha)">
+      <created>1546616791424</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1546616791424</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Some Debugging">
+      <created>1546617276903</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1546617276903</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Some Debugging">
+      <created>1546617774988</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1546617774988</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Forcing Database">
+      <created>1546618413223</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1546618413223</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Forcing Database">
+      <created>1546618589577</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1546618589577</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Testing">
+      <created>1546618857939</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1546618857939</updated>
+    </task>
+    <task id="LOCAL-00009" summary="- &quot;Debug for commandhandler&quot;&#10;- fixing the mysql database">
+      <created>1546791721221</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1546791721221</updated>
+    </task>
+    <task id="LOCAL-00010" summary="- &quot;Debug Mode&quot;">
+      <created>1546792008665</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1546792008665</updated>
+    </task>
+    <task id="LOCAL-00011" summary="SOAP is a piece of shit">
+      <created>1546792732915</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1546792732915</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Level down setting, only for testing purposes.">
+      <created>1546792893208</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1546792893208</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Daily Money">
+      <created>1550503612803</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1550503612803</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixing error">
+      <created>1550504692982</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1550504692982</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Disabling Daily">
+      <created>1550504856733</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1550504856733</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Money Command">
+      <created>1551378952726</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1551378952726</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fixing a tiny mistake...">
+      <created>1551379357910</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1551379357910</updated>
+    </task>
+    <task id="LOCAL-00018" summary="title and description">
+      <created>1551539037033</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1551539037034</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Editing Help from the command">
+      <created>1551539522004</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1551539522004</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Updating the leaderboard">
+      <created>1551539875709</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1551539875709</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Some Music Tips from RMC">
+      <created>1551540138135</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1551540138135</updated>
+    </task>
+    <task id="LOCAL-00022" summary="?">
+      <created>1551540493907</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1551540493907</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Make the commands so they normal">
+      <created>1551540526325</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1551540526325</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Fixing Path">
+      <created>1551541201006</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1551541201006</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Hopely the fix">
+      <created>1551548134743</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1551548134743</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Fixing Update Applying">
+      <created>1551549594368</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1551549594368</updated>
+    </task>
+    <task id="LOCAL-00027" summary="update update.js">
+      <created>1551549792307</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1551549792307</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Some Semicolons">
+      <created>1551550298226</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1551550298226</updated>
+    </task>
+    <task id="LOCAL-00029" summary="i`ve destroyed it, sorry">
+      <created>1551552322751</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1551552322751</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Now. I`ve undo all">
+      <created>1551552647889</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1551552647890</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Logging">
+      <created>1551552897634</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1551552897634</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Hopefully error message for later">
+      <created>1551553056382</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1551553056382</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Achievement Alias for me.">
+      <created>1551553284844</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1551553284844</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33814000" />
+    <option name="totallyTimeSpent" value="25746000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49481866" visible="true" weight="0.2859304" />
-      <window_info id="Structure" order="1" sideWeight="0.5051814" side_tool="true" weight="0.2643857" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49333334" visible="true" weight="0.31316188" />
+      <window_info id="Structure" order="1" sideWeight="0.50666666" side_tool="true" weight="0.30357143" />
       <window_info id="Favorites" order="2" sideWeight="0.5051814" side_tool="true" weight="0.2643857" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.32885906" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.32885906" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49848714" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32718122" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49924356" visible="true" weight="0.0" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" weight="0.20469798" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.0" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32885906" />
+      <window_info anchor="bottom" id="Database Changes" order="8" sideWeight="0.49848714" weight="0.32569557" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.8441755" visible="true" weight="0.20785597" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.6414524" weight="0.35188216" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.15582451" side_tool="true" visible="true" weight="0.20785597" />
+      <window_info anchor="bottom" id="Database Console" order="12" sideWeight="0.48411497" weight="0.38625205" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49924356" weight="0.32885906" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.10363086" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.022692889" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49832216" visible="true" weight="0.2643857" />
@@ -392,132 +574,306 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
     <ignored-roots>
-      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/Mio" />
     </ignored-roots>
+    <MESSAGE value="- &quot;Debug Mode&quot;" />
+    <MESSAGE value="SOAP is a piece of shit" />
+    <MESSAGE value="Level down setting, only for testing purposes." />
+    <MESSAGE value="Daily Money" />
+    <MESSAGE value="Forcing Database" />
+    <MESSAGE value="Fixing error" />
+    <MESSAGE value="Disabling Daily" />
+    <MESSAGE value="Money Command" />
+    <MESSAGE value="Fixing a tiny mistake..." />
+    <MESSAGE value="title and description" />
+    <MESSAGE value="Editing Help from the command" />
+    <MESSAGE value="Updating the leaderboard" />
+    <MESSAGE value="Some Music Tips from RMC" />
+    <MESSAGE value="?" />
+    <MESSAGE value="Make the commands so they normal" />
+    <MESSAGE value="Fixing Path" />
+    <MESSAGE value="Hopely the fix" />
+    <MESSAGE value="Fixing Update Applying" />
+    <MESSAGE value="update update.js" />
+    <MESSAGE value="Some Semicolons" />
+    <MESSAGE value="i`ve destroyed it, sorry" />
+    <MESSAGE value="Now. I`ve undo all" />
+    <MESSAGE value="Logging" />
+    <MESSAGE value="Hopefully error message for later" />
+    <MESSAGE value="Achievement Alias for me." />
+    <option name="LAST_COMMIT_MESSAGE" value="Achievement Alias for me." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test.js" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/eb535604-fe7d-40e2-84f0-78bb20936428/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/sequelize/lib/dialects/mysql/query.js">
+    <entry file="file://$PROJECT_DIR$/events/debug.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+        <state relative-caret-position="46">
+          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commands/core/say1.js" />
-    <entry file="file://$PROJECT_DIR$/commands/core/say2.js" />
-    <entry file="file://$PROJECT_DIR$/commands/core/say3.js" />
-    <entry file="file://$PROJECT_DIR$/commands/core/say4.js" />
-    <entry file="file://$PROJECT_DIR$/commands/core/say5.js" />
-    <entry file="file://$PROJECT_DIR$/utils/database.js">
+    <entry file="file://$PROJECT_DIR$/commands/developer/eval.js" />
+    <entry file="file://$PROJECT_DIR$/commands/developer/debug.js" />
+    <entry file="file://$PROJECT_DIR$/commands/developer/update.js" />
+    <entry file="file://$PROJECT_DIR$/commands/vserver/commandlvl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+        <state relative-caret-position="102">
+          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/developer/skid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="20" selection-end-line="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/embed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2645">
-          <caret line="115" column="48" lean-forward="true" selection-start-line="115" selection-start-column="48" selection-end-line="115" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mio.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commands/core/kill.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commands/core/say.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commands/developer/level.js" />
-    <entry file="file://$PROJECT_DIR$/commands/core/help.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="29" column="53" lean-forward="true" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commands/core/emote.js" />
-    <entry file="file://$PROJECT_DIR$/commands/core/sql.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commands/core/eval.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/events/ready.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        <state relative-caret-position="391">
+          <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/events/message.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
+        <state relative-caret-position="368">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="das://eb535604-fe7d-40e2-84f0-78bb20936428/schema/mio/table/users">
+    <entry file="file://$PROJECT_DIR$/commands/money/money.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/pages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/config-variables.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/12c8f6be-14e0-4815-a9a3-d84bfcf642e3/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1577">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="72" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/embed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-852">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/parseCommands.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/social/profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/money/daily.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/vserver/shell.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/vserver/sql.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-138" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/music producer/tips.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/memes/triggered.js.disabled">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/memes/achievement.js.disabled">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="52" column="2" lean-forward="true" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/memes/triggered.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/ready.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/core/devmsg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="159" selection-start-line="5" selection-start-column="159" selection-end-line="5" selection-end-column="159" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/core/emoji.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/core/help.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="37" column="205" selection-start-line="37" selection-start-column="205" selection-end-line="37" selection-end-column="205" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/core/info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/core/invite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/core/say.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/core/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands/developer/channels.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://12c8f6be-14e0-4815-a9a3-d84bfcf642e3/schema/c10_Mio/table/users">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commands/core/achievement.js">
+    <entry file="file://$PROJECT_DIR$/commands/vserver/update.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="12" selection-start-line="12" selection-end-line="13" />
+        <state relative-caret-position="320">
+          <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commands/core/triggered.js">
+    <entry file="file://$PROJECT_DIR$/commands/money/leaderboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        <state relative-caret-position="323">
+          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/commands/memes/achievement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="52" column="2" lean-forward="true" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
