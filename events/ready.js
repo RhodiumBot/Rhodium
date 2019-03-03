@@ -1,15 +1,15 @@
-const config = require('../config.json');
-const fs = require('fs');
+const config = require("../config.json");
+const fs = require("fs");
 const { RichEmbed } = require("discord.js");
 
 
-let presences = [`Running version ${config.version}`, `Screw you, Cuprum.`, `melts at 1.964°C.`, `45`, `12,38 g/cm3`];
+let presences = [`Running version ${config.version}`, "Screw you, Cuprum.", "melts at 1.964°C.", "45", "12,38 g/cm3"];
 
 module.exports = async (client) => {
     
-    if(client.update && client.update.applied == false){
+    if(client.update && client.update.applied === false){
         client.channels.get(client.update.channel).send(`Update applied. Running version ${config.version}`);
-        client.channels.get(client.update.channel).fetchMessage(client.update.message).then(message => {
+        client.channels.get(client.update.channel).fetchMessage(client.update.message).then((message) => {
             let emb = new RichEmbed()
                 .setTitle(`Update initiated by ${message.author.tag}`)
                 .setDescription(`${client.vars.emojiIcons.check} Pulling changes from GitHub...
@@ -19,7 +19,7 @@ module.exports = async (client) => {
 
         
         client.update.applied = true;
-        fs.writeFileSync('update.json', JSON.stringify(client.update))
+        fs.writeFileSync('update.json', JSON.stringify(client.update));
     }
 
     client.utils.get("config-variables").run(client);
@@ -29,6 +29,6 @@ module.exports = async (client) => {
     console.log(`----------------------------------------------`.rainbow);
     
     setInterval(() => {
-        client.user.setPresence({status: "online", game: {name: presences[Math.round(Math.random() * presences.length-1)]}})
-    }, 30000)
+        client.user.setPresence({status: "online", game: {name: presences[Math.round(Math.random() * presences.length-1)]}});
+    }, 30000);
 };
