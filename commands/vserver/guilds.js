@@ -4,7 +4,7 @@ module.exports.run = async (msg, args, client) => {
     if(args.join(" ").includes("-l")){
         let contents = [];
 
-        client.guilds.map(i => i).forEach((guild, index) => {
+        client.guilds.map((i) => i).forEach((guild, index) => {
 
             let serverInfo = new DJS.RichEmbed()
                 .setTitle(`${guild.name} *(${guild.id})*`)
@@ -13,13 +13,15 @@ module.exports.run = async (msg, args, client) => {
                 ${client.vars.emojiIcons.accountstar} ${guild.owner.user}
                 ${(guild.me && guild.me.nickname ? `${client.vars.emojiIcons.at} ${guild.me.nickname}\n` : "")}${(guild.me.hasPermission("ADMINISTRATOR") ? `${client.vars.emojiIcons.accountheart} Has admin` : "")}`)
                 .setFooter(`Page ${index+1}/${client.guilds.size}`)
-                .setColor(0xffc600);
-            contents.push(serverInfo)
-        })
+                .setColor("#ffc600");
+            contents.push(serverInfo);
+        });
 
-        client.utils.get("pages").multiContent(msg, contents, client)
+        client.utils.get("pages").multiContent(msg, contents, client);
     }
-    else client.utils.get("pages").singleContent(msg, "List of all guilds", `${client.vars.emojiIcons.servernetwork} Total Guild Count: ${client.guilds.size}\nFor a detailed list, type ${msg.prefix}guilds -l`, client.guilds.map(g => `(${g.members.size})\t` + g.name).join(`,\n`), client)
+    else { 
+        client.utils.get("pages").singleContent(msg, "List of all guilds", `${client.vars.emojiIcons.servernetwork} Total Guild Count: ${client.guilds.size}\nFor a detailed list, type ${msg.prefix}guilds -l`, client.guilds.map( (g) => `(${g.members.size})\t` + g.name).join(",\n"), client); 
+    }
 
 }
 
@@ -28,4 +30,4 @@ module.exports.info = {
     level: 6,
     enabled: true,
     usage: ["", "-l"]
-}
+};
