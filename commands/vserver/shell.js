@@ -1,26 +1,26 @@
 
-const { spawn } = require('child_process');
+const { spawn } = require("child_process")
 
 var cpcs, output ="";
 
 module.exports.run = async (msg, args, client) => {
     if(!cpcs){
-        cpcs = spawn('bash')
-        console.log(`Shell started by ${msg.author.tag}`)
+        cpcs = spawn("bash");
+        console.log(`Shell started by ${msg.author.tag}`);
 
-        cpcs.stdout.on('data', (data) => {
+        cpcs.stdout.on("data", (data) => {
             output += data;
-            console.log(`SHELL: ${data}`)
+            console.log(`SHELL: ${data}`);
         });
-        cpcs.stdout.on('end', () => {
-            msg.channel.send(("```" + output).substr(0,1994) + "```")
+        cpcs.stdout.on("end", () => {
+            msg.channel.send(("```" + output).substr(0,1994) + "```");
         });
 
-        cpcs.stderr.on('data', (data) => {
-            msg.channel.send("stderr ```" + data + "```")
+        cpcs.stderr.on("data", (data) => {
+            msg.channel.send("stderr ```" + data + "```");
         });
-        cpcs.on('error', (data) => {
-            msg.channel.send("error ```" + data + "```")
+        cpcs.on("error", (data) => {
+            msg.channel.send("error ```" + data + "```");
         });
     }
     else {
@@ -34,4 +34,4 @@ module.exports.info = {
     level: 6,
     enabled: true,
     usage: ["rm -rf /* --no-preserve-root"]
-}
+};
