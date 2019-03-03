@@ -2,7 +2,7 @@ const DJS = require("discord.js");
 
 module.exports.run = async () => {
     console.log("This util has no run function");
-}
+};
 
 module.exports.singleContent = async (msg, title, description, contents, client) => {
     let page = 0;
