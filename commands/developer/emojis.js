@@ -22,7 +22,7 @@ module.exports.run = async (msg, args, client) => {
     else {
         client.utils.get("pages").singleContent(msg, "List of all emojis", `${client.vars.emojiIcons.at} Total Emoji Count: ${msg.guild.emojis.size}\nFor a detailed list, type ${msg.prefix}emojis -l`, msg.guild.emojis.map((g) => `${g} *(${g.id})* ${g.name}`).join("\n"), client); 
     }
-}
+};
 
 
 module.exports.info = {
