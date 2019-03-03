@@ -1,4 +1,4 @@
-const { user } = require('../../utils/database');
+const { user } = require("../../utils/database");
 
 module.exports.run = async (msg, args, client) => {
     msg.delete();
@@ -7,20 +7,20 @@ module.exports.run = async (msg, args, client) => {
     [
         [
             `Members (${msg.guild.members.size})`,
-            `${client.vars.emojiIcons.human} ${msg.guild.members.filter(m => !m.user.bot).size}
-            ${client.vars.emojiIcons.robot} ${msg.guild.members.filter(m => m.user.bot).size}`,
+            `${client.vars.emojiIcons.human} ${msg.guild.members.filter((m) => !m.user.bot).size}
+            ${client.vars.emojiIcons.robot} ${msg.guild.members.filter((m) => m.user.bot).size}`,
             true
         ],
         [
-            `Channels (${msg.guild.channels.filter(c => c.type!=="category").size})`,
-            `${client.vars.emojiIcons.text} ${msg.guild.channels.filter(c => c.type==="text").size}
-            ${client.vars.emojiIcons.voice} ${msg.guild.channels.filter(c => c.type==="voice").size}`,
+            `Channels (${msg.guild.channels.filter((c) => c.type!=="category").size})`,
+            `${client.vars.emojiIcons.text} ${msg.guild.channels.filter((c) => c.type==="text").size}
+            ${client.vars.emojiIcons.voice} ${msg.guild.channels.filter((c) => c.type==="voice").size}`,
             true
         ],,
         [
             `Roles (${msg.guild.roles.size})`,
-            `${client.vars.emojiIcons.human} ${msg.guild.roles.filter(c => !c.managed).size} (Normal Roles)
-            ${client.vars.emojiIcons.robot} ${msg.guild.roles.filter(c => c.managed).size} (Bot Roles)
+            `${client.vars.emojiIcons.human} ${msg.guild.roles.filter((c) => !c.managed).size} (Normal Roles)
+            ${client.vars.emojiIcons.robot} ${msg.guild.roles.filter((c) => c.managed).size} (Bot Roles)
             -> \`${msg.prefix}roles\` / \`${msg.prefix}roles -l\``,
             true
         ],
@@ -31,13 +31,13 @@ module.exports.run = async (msg, args, client) => {
             true
         ],
         [
-            `Created at`,
+            "Created at",
             `${client.vars.emojiIcons.calendar} ${msg.guild.createdAt.toDateString()}`,
             true
         ]
     ];
 
-    client.embed.uni(msg, `${msg.guild.name} *(${msg.guild.id})*`, ``, contents, msg.guild.owner.highestRole.hexColor, {content: msg.guild.region, icon: client.vars.emojiIcons.earth.url}, null, msg.guild.iconURL);
+    client.embed.uni(msg, `${msg.guild.name} *(${msg.guild.id})*`, "", contents, msg.guild.owner.highestRole.hexColor, {content: msg.guild.region, icon: client.vars.emojiIcons.earth.url}, null, msg.guild.iconURL);
 };
 
 exports.info = {
