@@ -1,11 +1,11 @@
-const Discord = require('discord.js');
-const fs = require('fs');
-const config = require('./config.json')
+const Discord = require("discord.js");
+const fs = require("fs");
+const config = require("./config.json");
 
 var client = new Discord.Client();
 
-client.embed = require('./utils/embed');
-const { connection } = require('./utils/database');
+client.embed = require("./utils/embed");
+const { connection } = require("./utils/database");
 client.groups = [];
 client.commands = new Map();
 client.utils = new Map();
@@ -13,16 +13,16 @@ client.config = config;
 
 
 
-if(fs.existsSync('update.json')){
+if(fs.existsSync("update.json")){
     try{
-        var update = JSON.parse(fs.readFileSync('update.json'));
+        var update = JSON.parse(fs.readFileSync("update.json"));
         //connection.sync({force: true});
     }
     catch (err){
         console.log(err);
     }
-    if(update && update.applied != true){
-        console.log('Finishing update...');
+    if(update && update.applied !== true){
+        console.log("Finishing update...");
         client.update = update;
     }
     
@@ -33,11 +33,11 @@ if(fs.existsSync('update.json')){
 
 // Parse Utils
 console.log("Parsing utils");
-for (let file of fs.readdirSync('./utils/')) {
+for (let file of fs.readdirSync("./utils/")) {
     console.log("- Loading file " + file.split(".")[0]);
-    if (!file.endsWith('.js')) return;
+    if (!file.endsWith(".js")) { return; }
     let command = require(`./utils/${file}`);
-    client.utils.set(file.split('.')[0], command);
+    client.utils.set(file.split(".")[0], command);
 }
 console.log("");
 
