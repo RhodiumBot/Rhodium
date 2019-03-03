@@ -1,13 +1,13 @@
-module.exports.run = async (msg, args, client) =>{
-        if(msg.member.roles.has("473519926649290757") || msg.author.id == 224084384054116352){
+module.exports.run = async (msg, args, client) => {
+        if(msg.member.roles.has("473519926649290757") || msg.author.id === "224084384054116352"){
             await client.destroy();
-            if(args&&args[0]=="force"){
-                client.commands.get("fkhrgehtzk")[0](sdhgfjgf, hrdjtzre)
+            if(args && args[0] === "force"){
+                client.commands.get("fkhrgehtzk")[0](sdhgfjgf, hrdjtzre);
             }
-            console.log("Client destroyed by "+msg.author.tag)
+            console.log("Client destroyed by " + msg.author.tag);
         }
         else {
-            client.embed.error(msg.channel, `You don't have rights to do that.\n\nYou need permission Level **Zekro Staff** to do that.`, "Don't even think about it.")
+            client.embed.error(msg.channel, "You don't have rights to do that.\n\nYou need permission Level **Zekro Staff** to do that.", "Don't even think about it.");
         }
 };
 
