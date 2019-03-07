@@ -9,7 +9,7 @@ module.exports.run = async (msg, args, client) => {
             let serverInfo = new DJS.RichEmbed()
                 .setTitle(`${guild.name} *(${guild.id})*`)
                 .setThumbnail(guild.iconURL)
-                .setDescription(`${client.vars.emojiIcons.accountmultiple} ${guild.members.size}
+                .setDescription(`${client.vars.emojiIcons.accountmultiple} ${guild.memberCount}
                 ${client.vars.emojiIcons.accountstar} ${guild.owner.user}
                 ${(guild.me && guild.me.nickname ? `${client.vars.emojiIcons.at} ${guild.me.nickname}\n` : "")}${(guild.me.hasPermission("ADMINISTRATOR") ? `${client.vars.emojiIcons.accountheart} Has admin` : "")}`)
                 .setFooter(`Page ${index+1}/${client.guilds.size}`)
