@@ -1,19 +1,19 @@
 module.exports.run = async (msg, args, client) => {
     if(!args[0]) { return msg.channel.send("Maybe you should mention a user."); }
-    const user = message.mentions.users.first();
+    const user = msg.mentions.users.first();
 
     if(!user){
             msg.channel.send("Maybe you should mention a user.");
         }
         else {
-            const member = message.guild.member(user);
-            if(!member) { return message.reply(`That user isn\\'t in this guild!`);}
+            const member = msg.guild.member(user);
+            if(!member) { return msg.reply(`That user isn\\'t in this guild!`);}
             try{
-                const member = message.guild.member(user);
+                const member = msg.guild.member(user);
                 member.ban('').then(() => {
-                    message.reply(`Successfully kicked ${user.tag}`);
+                    msg.reply(`Successfully kicked ${user.tag}`);
                 }).catch(err => {
-                    message.reply('I was unable to kick the member');
+                    msg.reply('I was unable to kick the member');
                     console.error(err);
                 });
             }
