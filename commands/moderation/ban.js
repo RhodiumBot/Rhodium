@@ -11,10 +11,10 @@ module.exports.run = async (msg, args, client) => {
             if(!member) { return msg.reply(`That user isn\\'t in this guild!`);}
             try{
                 const member = msg.guild.member(user);
-                member.ban({days: 30, reason: `${args.join(" ").replace(`<@!${msg.mentions.members.first().id}>`, "").replace(`<@${msg.mentions.members.first().id}>`, "")}`}).then(() => {
+                member.ban({days: 7, reason: `${args.join(" ").replace(`<@!${msg.mentions.members.first().id}>`, "").replace(`<@${msg.mentions.members.first().id}>`, "")}`}).then(() => {
                     msg.reply(`Successfully banned ${user.tag}`);
                 }).catch(err => {
-                    msg.reply('I was unable to kick the member');
+                    msg.reply('I was unable to ban the member');
                     console.error(err);
                 });
             }
