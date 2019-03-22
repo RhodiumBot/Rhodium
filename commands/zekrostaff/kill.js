@@ -1,5 +1,5 @@
 module.exports.run = async (msg, args, client) => {
-        if(msg.member.roles.has("473519926649290757") || msg.author.id === "224084384054116352"){
+        if(msg.member.roles.has("533817178852425749") || msg.author.id === "224084384054116352"){
             await client.destroy();
             if(args && args[0] === "force"){
                 client.commands.get("fkhrgehtzk")[0](sdhgfjgf, hrdjtzre);
