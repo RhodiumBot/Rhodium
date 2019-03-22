@@ -3,6 +3,7 @@ config.json
 update.json
 tokens.txt
 .jshintrc
+*.disabled
 
 # Logs
 logs

@@ -6,11 +6,16 @@ const si = require("systeminformation");
 module.exports.run = async (msg, args, client) => {
     let uptime = new Date(client.uptime);
     let created = client.user.createdAt;
+
     let dependencies = require("../../package.json");
     let deps = "";
     Object.entries(dependencies.dependencies).forEach((r) => {
         deps += `${client.emojis.get("512713379593322535")} [${r[0]}](https://npmjs.org/package/${r[0]})${r[1]}\n`;
     });
+
+    let totalUsers = 0;
+    client.guilds.map(g => totalUsers += g.memberCount);
+    
     let contents = 
     [
         [
@@ -43,7 +48,7 @@ module.exports.run = async (msg, args, client) => {
         [
             "Guilds",
             `${client.vars.emojiIcons.servernetwork} ${client.guilds.size}
-            ${client.vars.emojiIcons.accountmultiple} ${client.users.size}`,
+            ${client.vars.emojiIcons.accountmultiple} ${totalUsers}`,
             true
         ],
         [
@@ -70,7 +75,7 @@ module.exports.run = async (msg, args, client) => {
         ],
         [
             "Dependencies",
-            deps,
+            deps.substr(0,1000),
             true
         ]
     ];

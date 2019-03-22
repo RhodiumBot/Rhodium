@@ -17,7 +17,7 @@ module.exports.run = async (msg, args, client) => {
         else if(typeof args[1] !== "undefined") { return client.embed.error(msg.channel, '```Please specify a valid number!```', ':warning: This didn\'t work.'); }
         try {
             let ergebnis = await connection.query("update users set commandlevel=" + level + " where user=" + user.id + ";");
-            client.embed.success(msg.channel, "```" + user.username + " has been globally assigned the command level " + level + ".```", "<a:success:471096765613998080> Execution successful."); }
+            client.embed.success(msg.channel, "```" + user.username + " has been globally assigned the command level " + level + ".```", "<a:success:471096765613998080> Execution successful.");
         } catch(e) {
             return client.embed.error(msg.channel, "```" + e.message + "```", ":warning: SQL returned an error");
         }
