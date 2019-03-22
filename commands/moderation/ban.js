@@ -1,5 +1,6 @@
 module.exports.run = async (msg, args, client) => {
-    if(!args[0]) { return msg.channel.send("Maybe you should mention a user."); }
+    // TODO: implement Guild-ModLog-Channel
+    if(!args) { return msg.channel.send("Maybe you should mention a user."); }
     const user = msg.mentions.users.first();
 
     if(!user){
@@ -10,8 +11,8 @@ module.exports.run = async (msg, args, client) => {
             if(!member) { return msg.reply(`That user isn\\'t in this guild!`);}
             try{
                 const member = msg.guild.member(user);
-                member.ban('').then(() => {
-                    msg.reply(`Successfully kicked ${user.tag}`);
+                member.ban({days: 30, reason: `${args.join(" ").replace(`<@!${msg.mentions.members.first().id}>`, "").replace(`<@${msg.mentions.members.first().id}>`, "")}`}).then(() => {
+                    msg.reply(`Successfully banned ${user.tag}`);
                 }).catch(err => {
                     msg.reply('I was unable to kick the member');
                     console.error(err);

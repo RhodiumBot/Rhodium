@@ -1,7 +1,7 @@
 const Discord   = require("discord.js");
-const Canvas = require("canvas");
+//const Canvas = require("canvas");
 module.exports.run = async (msg, args, client) => {
-    let picture;
+    /*let picture;
     let text1;
     if(msg.mentions.members.first()) {
         picture = msg.mentions.users.first().displayAvatarURL+"?size=128";
@@ -41,11 +41,13 @@ module.exports.run = async (msg, args, client) => {
 
         msg.channel.send("", {
         "file": Buffer.from(finalimage)
-    });
+    });*/
+
+    msg.channel.send("This command will exported to a extra bot with more image commands.")
 };
 
 module.exports.info = {
-    description: "Generates a minecraft achievement",
+    description: "Generates a minecraft achievement -> 'Disabled'",
     level: 0,
     enabled: true,
     usage: ["<some text>", "@user <some text>"],
