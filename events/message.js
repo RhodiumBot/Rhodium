@@ -51,7 +51,7 @@ module.exports = async (client, msg) => {
                 devmsgmuted: false
             }}).catch(err => {console.log("[ERROR] [message.js] ".red + err)});*/
             if (client.commands.get(invoke)[0].info.level > level) {
-                return msg.channel.send("Your level is not high enough: " + entry.commandlevel + "Needed Level:" + client.commands.get(invoke)[0].info.level);
+                return msg.channel.send("Your level is not high enough: " + entry.commandlevel + " Needed Level:" + client.commands.get(invoke)[0].info.level);
             } else if (client.commands.get(invoke)[0].info.level === level || client.commands.get(invoke)[0]) {
                 if (!client.commands.get(invoke)[0].info.permissions || msg.channel.memberPermissions(msg.member).has(client.commands.get(invoke)[0].info.permissions)) {
                     try {
