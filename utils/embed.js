@@ -7,7 +7,7 @@ const COLORS = {
     yellow: "#FFB900",
     gray:   "#515C6B",
     purple: "#6B69D6"
-}
+};
 
 module.exports = {
 
