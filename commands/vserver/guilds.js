@@ -1,5 +1,11 @@
 const DJS = require("discord.js");
 
+let compare = (a, b) => {
+    if(a.members.size < b.members.size){ return 1; }
+    if(a.members.size > b.members.size){ return -1; }
+    return 0;
+};
+
 module.exports.run = async (msg, args, client) => {
     if(args.join(" ").includes("-l")){
         let contents = [];
@@ -20,7 +26,7 @@ module.exports.run = async (msg, args, client) => {
         client.utils.get("pages").multiContent(msg, contents, client);
     }
     else { 
-        client.utils.get("pages").singleContent(msg, "List of all guilds", `${client.vars.emojiIcons.servernetwork} Total Guild Count: ${client.guilds.size}\nFor a detailed list, type ${msg.prefix}guilds -l`, client.guilds.map( (g) => `(${g.members.size})\t` + g.name).join(",\n"), client); 
+        client.utils.get("pages").singleContent(msg, "List of all guilds", `${client.vars.emojiIcons.servernetwork} Total Guild Count: ${client.guilds.size}\nFor a detailed list, type ${msg.prefix}guilds -l`, client.guilds.sort(compare).map( (g) => `(${g.members.size})\t` + g.name).join(",\n"), client);
     }
 
 };
