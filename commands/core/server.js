@@ -2,7 +2,9 @@ const { user } = require("../../utils/database");
 
 module.exports.run = async (msg, args, client) => {
     msg.delete();
-    
+    await msg.guild.fetchMembers();
+
+
     let contents = 
     [
         [
