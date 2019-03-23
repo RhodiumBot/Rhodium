@@ -114,6 +114,21 @@ let Server = database.define('servers', {
     prefix: {
         type: Sequelize.STRING(200),
         allowNull: false
+    },
+    modlogbool: {
+      type: Sequelize.BOOLEAN,
+      allowNull: true
+    },
+    modlog: {
+        type: Sequelize.STRING(200),
+        allowNull: true
+    },
+    jlmsgbool: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false
+    },
+    jlmsgchannel: {
+        type: Sequelize.STRING(200)
     }
 });
 
