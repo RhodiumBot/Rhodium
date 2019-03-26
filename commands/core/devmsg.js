@@ -13,5 +13,6 @@ module.exports.info = {
 description: "Sends a message to the developers of this bot.",
 level: 1,
 enabled: true,
-usage: ["<Your message>"]
+usage: ["<Your message>"],
+    dm: true
 };

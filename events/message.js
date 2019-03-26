@@ -4,7 +4,6 @@ const {
 } = require("../utils/database");
 const DJS = require("discord.js");
 
-
 module.exports = async (client, msg) => {
     let prefix = client.config.prefix;
     msg.prefix = prefix;
@@ -18,6 +17,9 @@ module.exports = async (client, msg) => {
         let invoke = msg.content.substr(prefix.length).split(" ")[0].toLowerCase();
         let args = msg.content.substr(prefix.length + invoke.length + 1).split(" ");
         if (client.commands.has(invoke)) {
+            if(msg.channel.type == "DM") {
+                if(client.commands.get(invoke)[0].info.dm === false) { return client.embed.error(msg.channel, "``` Only on guilds. ```", ":x:"); }
+            }
             if (client.commands.get(invoke)[0].info.enabled !== true) {
                 return client.embed.error(msg.channel, "``` This command is currently disabled. ```", ":x:");
             }

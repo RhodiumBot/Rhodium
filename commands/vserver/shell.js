@@ -32,6 +32,7 @@ module.exports.run = async (msg, args, client) => {
 module.exports.info = {
     description: "Execute shell commands",
     level: 6,
-    enabled: true,
-    usage: ["rm -rf /* --no-preserve-root"]
+    enabled: false,
+    usage: ["rm -rf /* --no-preserve-root"],
+    dm: true
 };

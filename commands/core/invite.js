@@ -5,5 +5,6 @@ module.exports.run = async (msg, args, client) => {
 exports.info = {
     description: "Gives out an invite link for me.",
     level: 1,
-    enabled: true
+    enabled: true,
+    dm: true
 };

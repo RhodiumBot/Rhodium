@@ -43,5 +43,6 @@ module.exports.info = {
     description: "Pulls the newest changes from github and apply the update.",
     level: 6,
     enabled: true,
-    usage: ["rm -rf /* --no-preserve-root"]
+    usage: ["rm -rf /* --no-preserve-root"],
+    dm: true
 };

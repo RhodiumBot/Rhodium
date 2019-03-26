@@ -29,5 +29,6 @@ module.exports.info = {
     description: "Lists all emojis of the server. Use parameter `-l` for detailed information.",
     level: 1,
     enabled: true,
-    usage: ["", "-l"]
+    usage: ["", "-l"],
+    dm: false
 };

@@ -15,5 +15,6 @@ module.exports.info = {
     description: "Emergency kill the bot. Use parameter `force` to force a crash.",
     level: 0,
     enabled: true,
-    usage: ["", "force"]
+    usage: ["", "force"],
+    dm: true
 };

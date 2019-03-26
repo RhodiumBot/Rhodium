@@ -14,5 +14,6 @@ exports.info = {
     level: 1,
     enabled: true,
     usage: [" ", "@user"],
-    alias: ["bal", "money"]
+    alias: ["bal", "money"],
+    dm: true
 };

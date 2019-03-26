@@ -45,5 +45,6 @@ exports.info = {
     description: "Gives you useful tips when producing music.",
     level: 1,
     enabled: true,
-    usage: ["", "<tip_ID>"]
+    usage: ["", "<tip_ID>"],
+    dm: true
 };

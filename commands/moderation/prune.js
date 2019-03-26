@@ -24,5 +24,6 @@ module.exports.info = {
     level: 0,
     permissions: 8192,
     enabled: true,
-    usage: ["<number>"]
+    usage: ["<number>"],
+    dm: false
 };

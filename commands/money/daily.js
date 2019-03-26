@@ -16,5 +16,6 @@ exports.info = {
     description: "Gives you a random amount of money",
     level: 1,
     enabled: true,
-    usage: [" "]
+    usage: [" "],
+    dm: true
 };

@@ -12,5 +12,6 @@ module.exports.info = {
     description: "Execute util files",
     level: 6,
     enabled: true,
-    usage: ["<util_name>"]
+    usage: ["<util_name>"],
+    dm: true
 };

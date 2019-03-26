@@ -38,5 +38,6 @@ module.exports.info = {
     level: 0,
     permissions: 2,
     enabled: true,
-    usage: ["<@User>"]
+    usage: ["<@User>"],
+    dm: false
 };

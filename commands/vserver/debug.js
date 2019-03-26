@@ -10,5 +10,6 @@ module.exports.info = {
     description: "debug mode",
     level: 1,
     enabled: true,
-    usage: ["-"]
+    usage: ["-"],
+    dm: true
 };

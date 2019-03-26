@@ -19,5 +19,6 @@ exports.info = {
     level: 1,
     enabled: true,
     usage: [" "],
-    alias: ["lb", "top"]
+    alias: ["lb", "top"],
+    dm: true
 };
