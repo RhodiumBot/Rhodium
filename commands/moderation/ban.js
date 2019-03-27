@@ -1,4 +1,5 @@
 const { guild } = require("../../utils/database");
+const Discord = require("discord.js");
 
 module.exports.run = async (msg, args, client) => {
     // TODO: implement Guild-ModLog-Channel
@@ -14,13 +15,21 @@ module.exports.run = async (msg, args, client) => {
             try{
                 const member = msg.guild.member(user);
                 member.ban({days: 7, reason: `${args.join(" ").replace(`<@!${msg.mentions.members.first().id}>`, "").replace(`<@${msg.mentions.members.first().id}>`, "")}`}).then(async () => {
-                    msg.reply(`Successfully banned ${user.tag}`);
+                    msg.channel.send(`Successfully banned ${user.tag}`);
                     let entry = await guild.find({where: { serverid: msg.guild.id }});
                     if(!entry || entry.modlogbool === 0 || entry.modlogbool === false) {return;}
                     let modlog = await msg.guild.channels.get(entry.modlog);
-                    //modlog
+                    if(!modlog) { return; }
+                    let emb = new Discord.RichEmbed()
+                        .setTitle(`Case ${msg.id}`)
+                        .addField("Executor", `<@${msg.author.id}>`, true)
+                        .addField("Victim", `<@${msg.mentions.members.first().id}>`, true)
+                        .addField("Type", "BAN", true)
+                        .setColor("#000000")
+                        .addField("Description", `${args.join(" ").replace(`<@!${msg.mentions.members.first().id}>`, "").replace(`<@${msg.mentions.members.first().id}>`, "") ? args.join(" ").replace(`<@!${msg.mentions.members.first().id}>`, "").replace(`<@${msg.mentions.members.first().id}>`, "") : "Nothing there"}`, true);
+                    modlog.send(emb, "");
                 }).catch(err => {
-                    msg.reply('I was unable to ban the member');
+                    msg.channel.send('I was unable to ban the member');
                     console.error(err);
                 });
             }
