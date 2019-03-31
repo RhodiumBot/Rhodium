@@ -29,5 +29,6 @@ module.exports.info = {
     description: "Eval Command",
     level: 6,
     enabled: true,
-    usage: ["some.code(here)"]
+    usage: ["some.code(here)"],
+    dm: true
 };

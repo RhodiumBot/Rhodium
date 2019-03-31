@@ -79,5 +79,6 @@ module.exports.info = {
     description: "Shows your or a specific user's profile.",
     level: 0,
     enabled: true,
-    usage: ["", "@user", "<UserID>", "title {title}", "description {description}"]
+    usage: ["", "@user", "<UserID>", "title {title}", "description {description}"],
+    dm: true
 };

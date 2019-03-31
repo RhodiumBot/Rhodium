@@ -26,5 +26,6 @@ exports.info = {
     description: "Gives you the code of a specific command.",
     level: 1,
     enabled: true,
-    usage: ["command"]
+    usage: ["command"],
+    dm: true
 };

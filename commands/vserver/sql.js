@@ -22,5 +22,6 @@ module.exports.info = {
     description: "Execute SQL queries.",
     level: 6,
     enabled: true,
-    usage: ["SELECT * FROM stuff"]
+    usage: ["SELECT * FROM stuff"],
+    dm: true
 };

@@ -18,5 +18,6 @@ exports.info = {
     description: "Sends an emoji by name or ID.",
     level: 1,
     enabled: true,
-    usage: ["emoji_name", "<Emoji ID>"]
+    usage: ["emoji_name", "<Emoji ID>"],
+    dm: true
 };

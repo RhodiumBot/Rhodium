@@ -44,5 +44,6 @@ exports.info = {
     level: 1,
     enabled: true,
     usage: ["<command_name>"],
-    alias: []
+    alias: [],
+    dm: true
 };

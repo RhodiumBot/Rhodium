@@ -28,5 +28,6 @@ module.exports.info = {
     description: "(without second argument) Excludes a user from executing commands. \nUse second argument to specify a level.",
     level: 6,
     enabled: true,
-    usage: ["@user", "<UserID>", "@user <level>", "<UserID> <level>"]
+    usage: ["@user", "<UserID>", "@user <level>", "<UserID> <level>"],
+    dm: true
 };

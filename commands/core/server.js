@@ -45,5 +45,6 @@ module.exports.run = async (msg, args, client) => {
 exports.info = {
     description: "Shows useful information about the server.",
     level: 1,
-    enabled: true
+    enabled: true,
+    dm: false
 };

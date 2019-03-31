@@ -11,5 +11,6 @@ module.exports.run = async (msg, args, client) => {
 module.exports.info = {
     description: "Shows all permissions.",
     level: 1,
-    enabled: true
+    enabled: true,
+    dm: false
 };

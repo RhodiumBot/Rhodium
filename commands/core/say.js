@@ -7,5 +7,6 @@ module.exports.info = {
     description: "Gives out the given string.",
     level: 3,
     enabled: true,
-    usage:["some text"]
+    usage:["some text"],
+    dm: true
 };

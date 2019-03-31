@@ -101,7 +101,8 @@ module.exports.run = async (msg, args, client) => {
 module.exports.info = {
     description: "Shows basic information about the bot.",
     level: 1,
-    enabled: true
+    enabled: true,
+    dm: true
 };
 
 // ${client.emojis.get("511137774162804736")} Latency:

@@ -35,5 +35,6 @@ module.exports.info = {
     description: "Guild List",
     level: 6,
     enabled: true,
-    usage: ["", "-l"]
+    usage: ["", "-l"],
+    dm: true
 };
