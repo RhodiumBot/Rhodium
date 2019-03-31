@@ -10,7 +10,7 @@ module.exports.run = async (msg, args, client) => {
     if(args.join(" ").includes("-l")){
         let contents = [];
 
-        client.guilds.map((i) => i).forEach((guild, index) => {
+        client.guilds.sort(compare).map((i) => i).forEach((guild, index) => {
 
             let serverInfo = new DJS.RichEmbed()
                 .setTitle(`${guild.name} *(${guild.id})*`)
