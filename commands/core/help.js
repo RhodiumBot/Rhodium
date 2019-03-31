@@ -6,6 +6,7 @@ module.exports.run = async (msg, args, client) => {
                 let contents = [["Needed level", client.commands.get(args[0])[0].info.level, true], ["Enabled", (client.commands.get(args[0])[0].info.enabled ? "Yes" : "No"), true]];
                 client.commands.get(args[0])[0].info.usage && contents.push(["Usage", "```"+client.commands.get(args[0])[0].info.usage.map((a) => `${msg.prefix}${args[0]} ${a}`).join("\n")+"```", false]);
                 client.commands.get(args[0])[0].info.alias && contents.push(["Aliases", "```"+client.commands.get(args[0])[0].info.alias.map(a => `${msg.prefix}${a}`).join("\n")+"```", false]);
+                client.commands.get(args[0])[0].info.dm == true && contents.push(["DM", "DM Compatible, you can use it in DM.", false]);
                 //uni(msg, title, description, contents, color, footer, image, thumbnail, url){
                 client.embed.uni(msg, `Info about ${msg.prefix + args[0]}`, client.commands.get(args[0])[0].info.description, contents);
             }
