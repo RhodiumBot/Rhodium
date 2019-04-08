@@ -10,7 +10,7 @@ module.exports.run = async (msg, args, client) => {
     if(args.join(" ").includes("-l")){
         let contents = [];
 
-        client.guilds.sort(compare).map((i) => i).forEach((guild, index) => {
+        client.guilds.sort(compare).map((i) => i).forEach(async (guild, index) => {
 
             let serverInfo = new DJS.RichEmbed()
                 .setTitle(`${guild.name} *(${guild.id})*`)
@@ -18,8 +18,13 @@ module.exports.run = async (msg, args, client) => {
                 .setDescription(`${client.vars.emojiIcons.accountmultiple} ${guild.memberCount}
                 ${client.vars.emojiIcons.accountstar} ${guild.owner.user}
                 ${(guild.me && guild.me.nickname ? `${client.vars.emojiIcons.at} ${guild.me.nickname}\n` : "")}${(guild.me.hasPermission("ADMINISTRATOR") ? `${client.vars.emojiIcons.accountheart} Has admin` : "")}`)
+                .addField('MemberCount', `${client.vars.emojiIcons.human} ${guild.members.filter((m) => !m.user.bot).size} \n ${client.vars.emojiIcons.robot} ${guild.members.filter((m) => m.user.bot).size}`, true)
                 .setFooter(`Page ${index+1}/${client.guilds.size}`)
                 .setColor("#ffc600");
+            /*let invites = await guild.fetchInvites();
+            if(invites.first()) {
+                serverInfo.addField("Invite", "discord.gg/" + invites.first().code + " ", true)
+            }*/
             contents.push(serverInfo);
         });
 
