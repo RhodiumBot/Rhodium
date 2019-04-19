@@ -9,7 +9,7 @@ module.exports.run = async (msg, args, client) => {
         else if (client.emojis.has(args[0])){
             msg.channel.send(client.emojis.has(args[0]));
         }
-        else msg.channel.send(msg.author+", I can't find the emoji "+args.join("_"));
+        else msg.channel.send(msg.author+", I can't find this emoji.");
     }
     else msg.channel.send(msg.author + ", Please give me a valid emoji name or ID.");
 };
