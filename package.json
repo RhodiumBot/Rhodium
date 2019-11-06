@@ -23,7 +23,7 @@
     "express": "^4.16.4",
     "mysql2": "^1.6.1",
     "ping": "^0.2.2",
-    "sequelize": "^4.39.0",
+    "sequelize": "^5.15.1",
     "snekfetch": "^4.0.4",
     "systeminformation": "^3.47.0"
   },
