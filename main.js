@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 const config = require("./config.json");
+const version = require("./version.json")
 
 var client = new Discord.Client();
 
@@ -10,7 +11,7 @@ client.groups = [];
 client.commands = new Map();
 client.utils = new Map();
 client.config = config;
-
+client.config.version = version.version;
 
 
 if(fs.existsSync("update.json")){

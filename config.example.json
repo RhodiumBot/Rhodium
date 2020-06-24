@@ -2,7 +2,6 @@
     "applicationName": "Rhodium",
     "token":"your token",
     "prefix": ">>",
-    "version": "0.2.7b",
     "developers": ["301613319998013440", "224084384054116352"],
     "mysql": {
       "hostname": "you.server.com",
