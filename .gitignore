@@ -5,6 +5,8 @@ tokens.txt
 .jshintrc
 *.disabled
 
+package-lock-json
+
 # Logs
 logs
 *.log
