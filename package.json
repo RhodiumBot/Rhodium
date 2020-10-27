@@ -25,7 +25,7 @@
     "ping": "^0.2.2",
     "sequelize": "^5.15.1",
     "snekfetch": "^4.0.4",
-    "systeminformation": "^3.47.0"
+    "systeminformation": "^4.27.11"
   },
   "remarkConfig": {
     "plugins": [
